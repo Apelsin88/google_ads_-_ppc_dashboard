@@ -1,0 +1,60 @@
+﻿@page
+@model Google_Ads___PPC_Dashboard.Pages.Budgets.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Budget[0].Campaign)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Budget[0].Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Budget[0].Spend)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Budget[0].RemainingBudget)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Budget[0].Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Budget) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Campaign.CampaignId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Spend)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RemainingBudget)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.BudgetId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.BudgetId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.BudgetId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

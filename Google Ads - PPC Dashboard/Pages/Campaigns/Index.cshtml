@@ -1,0 +1,72 @@
+﻿@page
+@model Google_Ads___PPC_Dashboard.Pages.Campaigns.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaign[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaign[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaign[0].Budget)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaign[0].StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaign[0].EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaign[0].NetworkType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaign[0].TargetLocations)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Campaign) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Budget)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NetworkType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetLocations)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CampaignId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CampaignId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CampaignId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

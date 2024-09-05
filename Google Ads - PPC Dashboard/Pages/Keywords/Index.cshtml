@@ -1,0 +1,48 @@
+﻿@page
+@model Google_Ads___PPC_Dashboard.Pages.Keywords.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Keyword[0].AdGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Keyword[0].Text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Keyword[0].MatchType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Keyword) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdGroup.AdGroupId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatchType)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.KeywordId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.KeywordId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.KeywordId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
