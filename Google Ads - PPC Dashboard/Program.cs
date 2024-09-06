@@ -13,6 +13,7 @@ namespace Google_Ads___PPC_Dashboard
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddControllers();
 
             var app = builder.Build();
 
@@ -32,6 +33,8 @@ namespace Google_Ads___PPC_Dashboard
             app.UseAuthorization();
 
             app.MapRazorPages();
+
+            app.MapControllers();
 
             app.Run();
         }
