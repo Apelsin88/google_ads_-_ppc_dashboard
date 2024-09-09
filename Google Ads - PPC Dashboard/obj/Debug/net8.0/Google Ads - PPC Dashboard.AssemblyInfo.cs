@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Google Ads - PPC Dashboard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f91a05e5e808ef3270ce98566b338c2f7bfab04")]
 [assembly: System.Reflection.AssemblyProductAttribute("Google Ads - PPC Dashboard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Google Ads - PPC Dashboard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

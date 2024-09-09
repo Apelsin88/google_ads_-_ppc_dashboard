@@ -1,14 +1,22 @@
-﻿namespace Google_Ads___PPC_Dashboard.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Google_Ads___PPC_Dashboard.Models
 {
     public class Campaign
     {
-        public int CampaignId { get; set; }
+        public int Id { get; set; }
+        public string GoogleCampaignId { get; set; }
         public string Name { get; set; }
         public string Status { get; set; } // E.g., Active, Paused
         public decimal Budget { get; set; }
-        public DateTime StartDate { get; set; }
+        public string BudgetType { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime? StartDate { get; set; }
+        [DataType(DataType.Date)]
         public DateTime? EndDate { get; set; } // Nullable in case it's ongoing
-        public string NetworkType { get; set; } // E.g., Search, Display
-        public string TargetLocations { get; set; } // Could be a list of geo-targeting locations
+        [DataType(DataType.Date)]
+        public DateTime CreatedAt { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime UpdatedAt { get; set; }
     }
 }

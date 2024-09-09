@@ -2,16 +2,17 @@
 
 namespace Google_Ads___PPC_Dashboard.Models
 {
-    public class AdGroup
+    public class UserDashboardSetting
     {
         public int Id { get; set; }
-        public string GoogleAdGroup {  get; set; }
-        public int CampaignId { get; set; } // Foreign Key to Campaign
-        public string Name { get; set; }
-        public string Status { get; set; } // E.g., Enabled, Paused
+        public string UserId { get; set; }
+        public string WidgetType { get; set; }
+        public int WidgetPosition { get; set; }
+        public string WidgetSettings { get; set; }
         [DataType(DataType.Date)]
         public DateTime CreatedAt { get; set; }
         [DataType(DataType.Date)]
         public DateTime UpdatedAt { get; set;}
+
     }
 }

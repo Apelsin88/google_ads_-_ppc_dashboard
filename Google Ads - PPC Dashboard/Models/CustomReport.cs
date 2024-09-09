@@ -2,13 +2,12 @@
 
 namespace Google_Ads___PPC_Dashboard.Models
 {
-    public class AdGroup
+    public class CustomReport
     {
         public int Id { get; set; }
-        public string GoogleAdGroup {  get; set; }
-        public int CampaignId { get; set; } // Foreign Key to Campaign
+        public string UserId { get; set; }
         public string Name { get; set; }
-        public string Status { get; set; } // E.g., Enabled, Paused
+        public string Configuration { get; set; }
         [DataType(DataType.Date)]
         public DateTime CreatedAt { get; set; }
         [DataType(DataType.Date)]

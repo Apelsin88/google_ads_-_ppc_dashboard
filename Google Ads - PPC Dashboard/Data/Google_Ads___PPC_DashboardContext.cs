@@ -14,10 +14,10 @@ namespace Google_Ads___PPC_Dashboard.Data
         {
         }
 
-        public DbSet<Google_Ads___PPC_Dashboard.Models.Ad> Ad { get; set; } = default!;
-        public DbSet<Google_Ads___PPC_Dashboard.Models.AdGroup> AdGroup { get; set; } = default!;
-        public DbSet<Google_Ads___PPC_Dashboard.Models.Campaign> Campaign { get; set; } = default!;
-        public DbSet<Google_Ads___PPC_Dashboard.Models.Budget> Budget { get; set; } = default!;
-        public DbSet<Google_Ads___PPC_Dashboard.Models.Keyword> Keyword { get; set; } = default!;
+        public DbSet<Google_Ads___PPC_Dashboard.Models.Ad> Ads { get; set; } = default!;
+        public DbSet<Google_Ads___PPC_Dashboard.Models.AdGroup> AdGroups { get; set; } = default!;
+        public DbSet<Google_Ads___PPC_Dashboard.Models.Campaign> Campaigns { get; set; } = default!;
+        public DbSet<Google_Ads___PPC_Dashboard.Models.Budget> Budgets { get; set; } = default!;
+        public DbSet<Google_Ads___PPC_Dashboard.Models.Keyword> Keywords { get; set; } = default!;
     }
 }
