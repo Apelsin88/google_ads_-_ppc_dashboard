@@ -2,6 +2,7 @@
 
 namespace Google_Ads___PPC_Dashboard.Models
 {
+
     public class RefreshToken
     {
         public int Id { get; set; }

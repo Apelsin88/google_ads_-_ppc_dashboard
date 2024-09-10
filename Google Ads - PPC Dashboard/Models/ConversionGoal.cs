@@ -2,6 +2,7 @@
 
 namespace Google_Ads___PPC_Dashboard.Models
 {
+
     public class ConversionGoal
     {
         public int ConversionGoalId { get; set; }

@@ -2,6 +2,7 @@
 
 namespace Google_Ads___PPC_Dashboard.Models
 {
+
     public class Keyword
     {
         public int Id { get; set; }

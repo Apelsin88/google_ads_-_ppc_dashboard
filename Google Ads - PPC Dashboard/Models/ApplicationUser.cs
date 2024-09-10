@@ -2,6 +2,7 @@
 
 namespace Google_Ads___PPC_Dashboard.Models
 {
+
     public class ApplicationUser
     {
         public string Id { get; set; }
@@ -18,5 +19,9 @@ namespace Google_Ads___PPC_Dashboard.Models
         [DataType(DataType.Date)]
         public DateTime? LastLogin { get; set; }
 
+        // One-to-Many with CustomReport
+        public ICollection<CustomReport> CustomReports { get; set; }
+        // Many-to-Many with Role
+        public ICollection<UserRole> UserRoles { get; set; }
     }
 }

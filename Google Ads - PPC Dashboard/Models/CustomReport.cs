@@ -2,10 +2,12 @@
 
 namespace Google_Ads___PPC_Dashboard.Models
 {
+
     public class CustomReport
     {
         public int Id { get; set; }
         public string UserId { get; set; }
+        public ApplicationUser User { get; set; } // Navigation Property
         public string Name { get; set; }
         public string Configuration { get; set; }
         [DataType(DataType.Date)]
