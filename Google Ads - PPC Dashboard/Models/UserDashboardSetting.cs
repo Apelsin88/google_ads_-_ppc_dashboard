@@ -7,6 +7,7 @@ namespace Google_Ads___PPC_Dashboard.Models
     {
         public int Id { get; set; }
         public string UserId { get; set; }
+        public ApplicationUser User { get; set; } // Navigation Property
         public string WidgetType { get; set; }
         public int WidgetPosition { get; set; }
         public string WidgetSettings { get; set; }

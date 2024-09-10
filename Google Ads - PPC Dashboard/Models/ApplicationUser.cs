@@ -21,6 +21,10 @@ namespace Google_Ads___PPC_Dashboard.Models
 
         // One-to-Many with CustomReport
         public ICollection<CustomReport> CustomReports { get; set; }
+        // One-to-Many with UserDashboardsetting
+        public ICollection<UserDashboardSetting> UserDashboardSettings { get; set; }
+        // One-to-Many with RefreshToken
+        public ICollection<RefreshToken> RefreshTokens { get; set; }
         // Many-to-Many with Role
         public ICollection<UserRole> UserRoles { get; set; }
     }

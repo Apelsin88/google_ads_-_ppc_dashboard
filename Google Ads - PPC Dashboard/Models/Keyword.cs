@@ -8,6 +8,7 @@ namespace Google_Ads___PPC_Dashboard.Models
         public int Id { get; set; }
         public string GoogleKeywordId { get; set; }
         public int AdGroupId { get; set; } // Foreign Key to AdGroup
+        public AdGroup AdGroup { get; set; } // Navigation Property
         public string KeywordText { get; set; }
         public string MatchType { get; set; } // E.g., Exact, Phrase, Broad
         public string Status { get; set; }

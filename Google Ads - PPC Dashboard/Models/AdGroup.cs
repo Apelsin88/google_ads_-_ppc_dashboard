@@ -18,5 +18,7 @@ namespace Google_Ads___PPC_Dashboard.Models
 
         // Relationship: One-to-Many with Ads
         public ICollection<Ad> Ads { get; set; }
+        // Relationship: One-to-Many with Keywords
+        public ICollection<Keyword> Keywords { get; set; }
     }
 }
