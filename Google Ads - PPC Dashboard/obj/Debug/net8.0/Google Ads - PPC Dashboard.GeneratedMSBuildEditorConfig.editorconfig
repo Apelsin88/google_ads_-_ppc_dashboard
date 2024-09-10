@@ -26,6 +26,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
