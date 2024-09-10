@@ -16,8 +16,28 @@ namespace Google_Ads___PPC_Dashboard.Data
 
         public DbSet<Google_Ads___PPC_Dashboard.Models.Ad> Ads { get; set; } = default!;
         public DbSet<Google_Ads___PPC_Dashboard.Models.AdGroup> AdGroups { get; set; } = default!;
+
+        public DbSet<Google_Ads___PPC_Dashboard.Models.ApplicationUser> ApplicationUsers { get; set; } = default!;
+
         public DbSet<Google_Ads___PPC_Dashboard.Models.Campaign> Campaigns { get; set; } = default!;
-        public DbSet<Google_Ads___PPC_Dashboard.Models.Budget> Budgets { get; set; } = default!;
+
+        public DbSet<Google_Ads___PPC_Dashboard.Models.CampaignPerformance> CampaignPerformances { get; set; } = default!;
+
+        public DbSet<Google_Ads___PPC_Dashboard.Models.ConversionGoal> ConversionGoals { get; set; } = default!;
+
+        public DbSet<Google_Ads___PPC_Dashboard.Models.CustomReport> CustomReports { get; set; } = default!;
+
         public DbSet<Google_Ads___PPC_Dashboard.Models.Keyword> Keywords { get; set; } = default!;
+
+        public DbSet<Google_Ads___PPC_Dashboard.Models.RefreshToken> RefreshTokens { get; set; } = default!;
+
+        public DbSet<Google_Ads___PPC_Dashboard.Models.Role> Roles { get; set; } = default!;
+
+        public DbSet<Google_Ads___PPC_Dashboard.Models.UserDashboardSetting> UserDashboardSettings { get; set; } = default!;
+
+        public DbSet<Google_Ads___PPC_Dashboard.Models.UserRole> UserRoles { get; set; } = default!;
+
+
+        
     }
 }

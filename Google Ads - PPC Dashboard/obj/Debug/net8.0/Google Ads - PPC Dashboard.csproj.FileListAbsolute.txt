@@ -62,7 +62,6 @@ C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboar
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\obj\Debug\net8.0\Google Ads - PPC Dashboard.csproj.AssemblyReference.cache
-C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\obj\Debug\net8.0\Google Ads - PPC Dashboard.csproj.CopyComplete
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\Humanizer.dll
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
@@ -119,7 +118,6 @@ C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboar
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\System.Composition.TypedParts.dll
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
-C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\af\Humanizer.resources.dll
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\ar\Humanizer.resources.dll
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\az\Humanizer.resources.dll
@@ -264,3 +262,4 @@ C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboar
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\obj\Debug\net8.0\Google Ads - PPC Dashboard.sourcelink.json
+C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\obj\Debug\net8.0\Google A.7FF70D86.Up2Date
