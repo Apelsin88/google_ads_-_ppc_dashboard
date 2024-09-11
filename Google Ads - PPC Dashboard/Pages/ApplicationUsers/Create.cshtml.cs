@@ -7,16 +7,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Google_Ads___PPC_Dashboard.Data;
 using Google_Ads___PPC_Dashboard.Models;
+using Google_Ads___PPC_Dashboard.Services;
 
 namespace Google_Ads___PPC_Dashboard.Pages.ApplicationUsers
 {
     public class CreateModel : PageModel
     {
-        private readonly Google_Ads___PPC_Dashboard.Data.Google_Ads___PPC_DashboardContext _context;
+        ApplicationUserService _applicationUserService;
 
-        public CreateModel(Google_Ads___PPC_Dashboard.Data.Google_Ads___PPC_DashboardContext context)
+        public CreateModel(ApplicationUserService applicationUserService)
         {
-            _context = context;
+            _applicationUserService = applicationUserService;
         }
 
         public IActionResult OnGet()
@@ -28,17 +29,14 @@ namespace Google_Ads___PPC_Dashboard.Pages.ApplicationUsers
         public ApplicationUser ApplicationUser { get; set; } = default!;
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
-        public async Task<IActionResult> OnPostAsync()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            _context.ApplicationUsers.Add(ApplicationUser);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
-        }
+        //public async Task<IActionResult> OnPostAsync()
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return Page();
+        //    }
+        //    _applicationUserService.AddApplicationUserAsync(ApplicationUser);
+        //    return RedirectToPage("./Index");
+        //}
     }
 }
