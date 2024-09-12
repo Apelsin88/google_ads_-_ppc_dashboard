@@ -1,0 +1,74 @@
+﻿@page
+@model Google_Ads___PPC_Dashboard.Pages.Campaigns.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Campaign</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Campaign.GoogleCampaignId" class="control-label"></label>
+                <input asp-for="Campaign.GoogleCampaignId" class="form-control" />
+                <span asp-validation-for="Campaign.GoogleCampaignId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Campaign.Name" class="control-label"></label>
+                <input asp-for="Campaign.Name" class="form-control" />
+                <span asp-validation-for="Campaign.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Campaign.Status" class="control-label"></label>
+                <input asp-for="Campaign.Status" class="form-control" />
+                <span asp-validation-for="Campaign.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Campaign.Budget" class="control-label"></label>
+                <input asp-for="Campaign.Budget" class="form-control" />
+                <span asp-validation-for="Campaign.Budget" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Campaign.BudgetType" class="control-label"></label>
+                <input asp-for="Campaign.BudgetType" class="form-control" />
+                <span asp-validation-for="Campaign.BudgetType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Campaign.StartDate" class="control-label"></label>
+                <input asp-for="Campaign.StartDate" class="form-control" />
+                <span asp-validation-for="Campaign.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Campaign.EndDate" class="control-label"></label>
+                <input asp-for="Campaign.EndDate" class="form-control" />
+                <span asp-validation-for="Campaign.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Campaign.CreatedAt" class="control-label"></label>
+                <input asp-for="Campaign.CreatedAt" class="form-control" />
+                <span asp-validation-for="Campaign.CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Campaign.UpdatedAt" class="control-label"></label>
+                <input asp-for="Campaign.UpdatedAt" class="form-control" />
+                <span asp-validation-for="Campaign.UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

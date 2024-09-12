@@ -46,12 +46,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FtcGFpZ25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FtcGFpZ25zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FtcGFpZ25zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FtcGFpZ25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FtcGFpZ25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Privacy.cshtml]

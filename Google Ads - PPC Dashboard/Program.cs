@@ -1,6 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Google_Ads___PPC_Dashboard.Data;
+using Google.Ads.GoogleAds;
+using Google_Ads___PPC_Dashboard.Services;
+using Google.Api;
 namespace Google_Ads___PPC_Dashboard
 {
     public class Program
@@ -14,6 +17,9 @@ namespace Google_Ads___PPC_Dashboard
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddControllers();
+
+            builder.Services.AddScoped<IApplicationUserService, ApplicationUserService>();
+            builder.Services.AddScoped<IAdService, AdService>();
 
             var app = builder.Build();
 

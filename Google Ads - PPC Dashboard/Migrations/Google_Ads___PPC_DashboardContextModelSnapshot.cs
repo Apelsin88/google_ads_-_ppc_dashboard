@@ -72,6 +72,36 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                     b.HasIndex("AdGroupId");
 
                     b.ToTable("Ads");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AdGroupId = 1,
+                            AdType = "Text",
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2525),
+                            Description1 = "Save up to 50%",
+                            FinalUrl = "https://example.com",
+                            GoogleAdId = "AD001",
+                            HeadlinePart1 = "Huge Discounts",
+                            HeadlinePart2 = "Shop Now",
+                            Status = "Active",
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2527)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AdGroupId = 2,
+                            AdType = "Display",
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2530),
+                            Description1 = "Don't Miss Out",
+                            FinalUrl = "https://example.com",
+                            GoogleAdId = "AD002",
+                            HeadlinePart1 = "Winter Special",
+                            HeadlinePart2 = "Limited Time Offer",
+                            Status = "Paused",
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2531)
+                        });
                 });
 
             modelBuilder.Entity("Google_Ads___PPC_Dashboard.Models.AdGroup", b =>
@@ -105,6 +135,26 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                     b.HasIndex("CampaignId");
 
                     b.ToTable("AdGroups");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CampaignId = 1,
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2485),
+                            Name = "Discount Ads",
+                            Status = "Enabled",
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2487)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CampaignId = 2,
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2489),
+                            Name = "Holiday Ads",
+                            Status = "Paused",
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2491)
+                        });
                 });
 
             modelBuilder.Entity("Google_Ads___PPC_Dashboard.Models.ApplicationUser", b =>
@@ -147,6 +197,60 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ApplicationUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2560),
+                            Email = "john.doe@example.com",
+                            FirstName = "John",
+                            IsActive = true,
+                            LastLogin = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2562),
+                            LastName = "Doe",
+                            PasswordHash = "hashedpassword1",
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2561),
+                            Username = "john.doe"
+                        },
+                        new
+                        {
+                            Id = "2",
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2565),
+                            Email = "jane.smith@example.com",
+                            FirstName = "Jane",
+                            IsActive = true,
+                            LastLogin = new DateTime(2024, 9, 11, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2567),
+                            LastName = "Smith",
+                            PasswordHash = "hashedpassword2",
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2566),
+                            Username = "jane.smith"
+                        },
+                        new
+                        {
+                            Id = "3",
+                            CreatedAt = new DateTime(2024, 8, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2572),
+                            Email = "mike.jones@example.com",
+                            FirstName = "Mike",
+                            IsActive = false,
+                            LastLogin = new DateTime(2024, 9, 2, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2575),
+                            LastName = "Jones",
+                            PasswordHash = "hashedpassword3",
+                            UpdatedAt = new DateTime(2024, 8, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2574),
+                            Username = "mike.jones"
+                        },
+                        new
+                        {
+                            Id = "4",
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2577),
+                            Email = "emma.brown@example.com",
+                            FirstName = "Emma",
+                            IsActive = true,
+                            LastLogin = new DateTime(2024, 9, 7, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2580),
+                            LastName = "Brown",
+                            PasswordHash = "hashedpassword4",
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2579),
+                            Username = "emma.brown"
+                        });
                 });
 
             modelBuilder.Entity("Google_Ads___PPC_Dashboard.Models.Campaign", b =>
@@ -191,6 +295,32 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Campaigns");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Budget = 5000m,
+                            BudgetType = "Daily",
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2361),
+                            GoogleCampaignId = "GC001",
+                            Name = "Summer Sale",
+                            StartDate = new DateTime(2024, 8, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2304),
+                            Status = "Active",
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2365)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Budget = 3000m,
+                            BudgetType = "Monthly",
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2369),
+                            GoogleCampaignId = "GC002",
+                            Name = "Winter Sale",
+                            StartDate = new DateTime(2024, 7, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2368),
+                            Status = "Paused",
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2370)
+                        });
                 });
 
             modelBuilder.Entity("Google_Ads___PPC_Dashboard.Models.CampaignPerformance", b =>

@@ -6,7 +6,6 @@ namespace Google_Ads___PPC_Dashboard.Services
     public class ApplicationUserService : IApplicationUserService
     {
         Google_Ads___PPC_DashboardContext DbContext;
-
         public ApplicationUserService(Google_Ads___PPC_DashboardContext dbContext)
         {
             DbContext = dbContext;

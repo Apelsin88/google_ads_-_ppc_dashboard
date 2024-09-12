@@ -51,6 +51,34 @@ namespace Google_Ads___PPC_Dashboard.Data
                 .HasOne(ur => ur.Role)
                 .WithMany(r => r.UserRoles)
                 .HasForeignKey(ur => ur.RoleId);
+
+            base.OnModelCreating(modelBuilder);
+
+            // Seed Campaign Data
+            modelBuilder.Entity<Campaign>().HasData(
+                new Campaign { Id = 1, GoogleCampaignId = "GC001", Name = "Summer Sale", Status = "Active", Budget = 5000, BudgetType = "Daily", StartDate = DateTime.Now.AddMonths(-1), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now },
+                new Campaign { Id = 2, GoogleCampaignId = "GC002", Name = "Winter Sale", Status = "Paused", Budget = 3000, BudgetType = "Monthly", StartDate = DateTime.Now.AddMonths(-2), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now }
+            );
+
+            // Seed AdGroup Data
+            modelBuilder.Entity<AdGroup>().HasData(
+                new AdGroup { Id = 1, CampaignId = 1, Name = "Discount Ads", Status = "Enabled", CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now },
+                new AdGroup { Id = 2, CampaignId = 2, Name = "Holiday Ads", Status = "Paused", CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now }
+            );
+
+            // Seed Ad Data
+            modelBuilder.Entity<Ad>().HasData(
+                new Ad { Id = 1, GoogleAdId = "AD001", AdGroupId = 1, AdType = "Text", HeadlinePart1 = "Huge Discounts", HeadlinePart2 = "Shop Now", Description1 = "Save up to 50%", FinalUrl = "https://example.com", Status = "Active", CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now },
+                new Ad { Id = 2, GoogleAdId = "AD002", AdGroupId = 2, AdType = "Display", HeadlinePart1 = "Winter Special", HeadlinePart2 = "Limited Time Offer", Description1 = "Don't Miss Out", FinalUrl = "https://example.com", Status = "Paused", CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now }
+            );
+
+            // Seed ApplicationUser Data
+            modelBuilder.Entity<ApplicationUser>().HasData(
+                new ApplicationUser { Id = "1", Username = "john.doe", Email = "john.doe@example.com", PasswordHash = "hashedpassword1", FirstName = "John", LastName = "Doe", IsActive = true, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, LastLogin = DateTime.Now },
+                new ApplicationUser { Id = "2", Username = "jane.smith", Email = "jane.smith@example.com", PasswordHash = "hashedpassword2", FirstName = "Jane", LastName = "Smith", IsActive = true, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, LastLogin = DateTime.Now.AddDays(-1) },
+                new ApplicationUser { Id = "3", Username = "mike.jones", Email = "mike.jones@example.com", PasswordHash = "hashedpassword3", FirstName = "Mike", LastName = "Jones", IsActive = false, CreatedAt = DateTime.Now.AddMonths(-1), UpdatedAt = DateTime.Now.AddMonths(-1), LastLogin = DateTime.Now.AddDays(-10) },
+                new ApplicationUser { Id = "4", Username = "emma.brown", Email = "emma.brown@example.com", PasswordHash = "hashedpassword4", FirstName = "Emma", LastName = "Brown", IsActive = true, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, LastLogin = DateTime.Now.AddDays(-5) }
+            );
         }
 
     }

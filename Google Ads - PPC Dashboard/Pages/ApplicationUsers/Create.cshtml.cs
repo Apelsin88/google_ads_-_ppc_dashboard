@@ -13,30 +13,31 @@ namespace Google_Ads___PPC_Dashboard.Pages.ApplicationUsers
 {
     public class CreateModel : PageModel
     {
-        ApplicationUserService _applicationUserService;
+        ApplicationUserService UserService;
 
         public CreateModel(ApplicationUserService applicationUserService)
         {
-            _applicationUserService = applicationUserService;
+            UserService = applicationUserService;
         }
 
         public IActionResult OnGet()
         {
+            
             return Page();
         }
 
         [BindProperty]
         public ApplicationUser ApplicationUser { get; set; } = default!;
 
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
-        //public async Task<IActionResult> OnPostAsync()
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return Page();
-        //    }
-        //    _applicationUserService.AddApplicationUserAsync(ApplicationUser);
-        //    return RedirectToPage("./Index");
-        //}
+        //To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+            UserService.AddApplicationUserAsync(ApplicationUser);
+            return RedirectToPage("./Index");
+        }
     }
 }
