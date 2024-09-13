@@ -17,83 +17,83 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Google_Ads___PPC_Dashboard
 build_property.RootNamespace = Google_Ads___PPC_Dashboard
-build_property.ProjectDir = /workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/
+build_property.ProjectDir = C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard
+build_property.MSBuildProjectDirectory = C:\Users\JA365\source\repos\Google Ads - PPC Dashboard\Google Ads - PPC Dashboard
 build_property._RazorSourceGeneratorDebug = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXBwbGljYXRpb25Vc2Vycy9DcmVhdGUuY3NodG1s
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXBwbGljYXRpb25Vc2Vycy9EZWxldGUuY3NodG1s
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXBwbGljYXRpb25Vc2Vycy9EZXRhaWxzLmNzaHRtbA==
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXBwbGljYXRpb25Vc2Vycy9FZGl0LmNzaHRtbA==
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXBwbGljYXRpb25Vc2Vycy9JbmRleC5jc2h0bWw=
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FtcGFpZ25zL0NyZWF0ZS5jc2h0bWw=
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FtcGFpZ25zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FtcGFpZ25zL0RlbGV0ZS5jc2h0bWw=
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FtcGFpZ25zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FtcGFpZ25zL0RldGFpbHMuY3NodG1s
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FtcGFpZ25zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FtcGFpZ25zL0VkaXQuY3NodG1s
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FtcGFpZ25zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FtcGFpZ25zL0luZGV4LmNzaHRtbA==
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FtcGFpZ25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW4uY3NodG1s
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-c34v5ibowo
+[C:/Users/JA365/source/repos/Google Ads - PPC Dashboard/Google Ads - PPC Dashboard/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-m8em34zdih

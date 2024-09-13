@@ -3,6 +3,7 @@ using System;
 using Google_Ads___PPC_Dashboard.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -11,57 +12,63 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Google_Ads___PPC_Dashboard.Migrations
 {
     [DbContext(typeof(Google_Ads___PPC_DashboardContext))]
-    [Migration("20240913110814_SeedData")]
-    partial class SeedData
+    [Migration("20240912080333_ApplicationUsersSeedDummyData")]
+    partial class ApplicationUsersSeedDummyData
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
+            modelBuilder
+                .HasAnnotation("ProductVersion", "8.0.8")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("Google_Ads___PPC_Dashboard.Models.Ad", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("AdGroupId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("AdType")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description1")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FinalUrl")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("GoogleAdId")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HeadlinePart1")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HeadlinePart2")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -75,28 +82,28 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                             Id = 1,
                             AdGroupId = 1,
                             AdType = "Text",
-                            CreatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2525),
                             Description1 = "Save up to 50%",
                             FinalUrl = "https://example.com",
                             GoogleAdId = "AD001",
                             HeadlinePart1 = "Huge Discounts",
                             HeadlinePart2 = "Shop Now",
                             Status = "Active",
-                            UpdatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618)
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2527)
                         },
                         new
                         {
                             Id = 2,
                             AdGroupId = 2,
                             AdType = "Display",
-                            CreatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2530),
                             Description1 = "Don't Miss Out",
                             FinalUrl = "https://example.com",
                             GoogleAdId = "AD002",
                             HeadlinePart1 = "Winter Special",
                             HeadlinePart2 = "Limited Time Offer",
                             Status = "Paused",
-                            UpdatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618)
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2531)
                         });
                 });
 
@@ -104,25 +111,27 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CampaignId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("GoogleAdGroup")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -135,58 +144,58 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                         {
                             Id = 1,
                             CampaignId = 1,
-                            CreatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2485),
                             Name = "Discount Ads",
                             Status = "Enabled",
-                            UpdatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618)
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2487)
                         },
                         new
                         {
                             Id = 2,
                             CampaignId = 2,
-                            CreatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2489),
                             Name = "Holiday Ads",
                             Status = "Paused",
-                            UpdatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618)
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2491)
                         });
                 });
 
             modelBuilder.Entity("Google_Ads___PPC_Dashboard.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("bit");
 
                     b.Property<DateTime?>("LastLogin")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -196,53 +205,53 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                         new
                         {
                             Id = "1",
-                            CreatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2560),
                             Email = "john.doe@example.com",
                             FirstName = "John",
                             IsActive = true,
-                            LastLogin = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            LastLogin = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2562),
                             LastName = "Doe",
                             PasswordHash = "hashedpassword1",
-                            UpdatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2561),
                             Username = "john.doe"
                         },
                         new
                         {
                             Id = "2",
-                            CreatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2565),
                             Email = "jane.smith@example.com",
                             FirstName = "Jane",
                             IsActive = true,
-                            LastLogin = new DateTime(2024, 9, 12, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            LastLogin = new DateTime(2024, 9, 11, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2567),
                             LastName = "Smith",
                             PasswordHash = "hashedpassword2",
-                            UpdatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2566),
                             Username = "jane.smith"
                         },
                         new
                         {
                             Id = "3",
-                            CreatedAt = new DateTime(2024, 8, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            CreatedAt = new DateTime(2024, 8, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2572),
                             Email = "mike.jones@example.com",
                             FirstName = "Mike",
                             IsActive = false,
-                            LastLogin = new DateTime(2024, 9, 3, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            LastLogin = new DateTime(2024, 9, 2, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2575),
                             LastName = "Jones",
                             PasswordHash = "hashedpassword3",
-                            UpdatedAt = new DateTime(2024, 8, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            UpdatedAt = new DateTime(2024, 8, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2574),
                             Username = "mike.jones"
                         },
                         new
                         {
                             Id = "4",
-                            CreatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2577),
                             Email = "emma.brown@example.com",
                             FirstName = "Emma",
                             IsActive = true,
-                            LastLogin = new DateTime(2024, 9, 8, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            LastLogin = new DateTime(2024, 9, 7, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2580),
                             LastName = "Brown",
                             PasswordHash = "hashedpassword4",
-                            UpdatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2579),
                             Username = "emma.brown"
                         });
                 });
@@ -251,38 +260,40 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("Budget")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("BudgetType")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("EndDate")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("GoogleCampaignId")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("StartDate")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -294,24 +305,24 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                             Id = 1,
                             Budget = 5000m,
                             BudgetType = "Daily",
-                            CreatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2361),
                             GoogleCampaignId = "GC001",
                             Name = "Summer Sale",
-                            StartDate = new DateTime(2024, 8, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            StartDate = new DateTime(2024, 8, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2304),
                             Status = "Active",
-                            UpdatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618)
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2365)
                         },
                         new
                         {
                             Id = 2,
                             Budget = 3000m,
                             BudgetType = "Monthly",
-                            CreatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            CreatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2369),
                             GoogleCampaignId = "GC002",
                             Name = "Winter Sale",
-                            StartDate = new DateTime(2024, 7, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618),
+                            StartDate = new DateTime(2024, 7, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2368),
                             Status = "Paused",
-                            UpdatedAt = new DateTime(2024, 9, 13, 11, 8, 13, 107, DateTimeKind.Utc).AddTicks(7618)
+                            UpdatedAt = new DateTime(2024, 9, 12, 10, 3, 33, 426, DateTimeKind.Local).AddTicks(2370)
                         });
                 });
 
@@ -319,28 +330,30 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CampaignId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<int>("Clicks")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<decimal>("ConversionValue")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Conversions")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Cost")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("Date")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("Impressions")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -353,24 +366,26 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                 {
                     b.Property<int>("ConversionGoalId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ConversionGoalId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<decimal>("Value")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("ConversionGoalId");
 
@@ -381,25 +396,27 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Configuration")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -412,38 +429,40 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("AdGroupId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<decimal?>("Bid")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("GoogleKeywordId")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("KeywordText")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MatchType")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("QualityScore")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -456,21 +475,23 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("ExpiryDate")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Token")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -482,15 +503,15 @@ namespace Google_Ads___PPC_Dashboard.Migrations
             modelBuilder.Entity("Google_Ads___PPC_Dashboard.Models.Role", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedName")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -501,28 +522,30 @@ namespace Google_Ads___PPC_Dashboard.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("WidgetPosition")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("WidgetSettings")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("WidgetType")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -534,10 +557,10 @@ namespace Google_Ads___PPC_Dashboard.Migrations
             modelBuilder.Entity("Google_Ads___PPC_Dashboard.Models.UserRole", b =>
                 {
                     b.Property<string>("UserId")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("RoleId")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("UserId", "RoleId");
 

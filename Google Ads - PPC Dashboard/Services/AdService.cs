@@ -6,46 +6,42 @@ namespace Google_Ads___PPC_Dashboard.Services
 {
     public class AdService : IAdService
     {
-        private readonly Google_Ads___PPC_DashboardContext _dbContext;
+        Google_Ads___PPC_DashboardContext DbContext;
 
         public AdService(Google_Ads___PPC_DashboardContext dbContext)
         {
-            _dbContext = dbContext;
+            dbContext = DbContext;
+        }
+
+        public async Task<Ad> GetAdByIdAsync(int id)
+        {
+            return await DbContext.Ads.FindAsync(id);
         }
 
         public async Task<IEnumerable<Ad>> GetAllAdsAsync()
         {
-            return await _dbContext.Ads
-                .Include(a => a.AdGroup)
-                .ToListAsync();
-        }
-
-        public async Task<Ad?> GetAdByIdAsync(int id)
-        {
-            return await _dbContext.Ads
-            .Include(a => a.AdGroup)
-            .FirstOrDefaultAsync(a => a.Id == id);
+            return await DbContext.Ads.ToListAsync();
         }
 
         public async Task AddAdAsync(Ad ad)
         {
-            await _dbContext.Ads.AddAsync(ad);
-            await _dbContext.SaveChangesAsync();
+            await DbContext.Ads.AddAsync(ad);
+            await DbContext.SaveChangesAsync();
         }
 
         public async Task UpdateAdAsync(Ad ad)
         {
-            _dbContext.Ads.Update(ad);
-            await _dbContext.SaveChangesAsync();
+            DbContext.Ads.Update(ad);
+            await DbContext.SaveChangesAsync();
         }
 
         public async Task DeleteAdAsync(int id)
         {
-            var ad = await _dbContext.Ads.FindAsync(id);
+            var ad = await DbContext.Ads.FindAsync(id);
             if (ad != null)
             {
-                _dbContext.Ads.Remove(ad);
-                await _dbContext.SaveChangesAsync();
+                DbContext.Ads.Remove(ad);
+                await DbContext.SaveChangesAsync();
             }
         }
     }
