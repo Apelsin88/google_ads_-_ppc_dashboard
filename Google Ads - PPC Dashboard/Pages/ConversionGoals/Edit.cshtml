@@ -1,0 +1,55 @@
+@page
+@model Google_Ads___PPC_Dashboard.Pages.ConversionGoals.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ConversionGoal</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ConversionGoal.ConversionGoalId" />
+            <div class="form-group">
+                <label asp-for="ConversionGoal.Name" class="control-label"></label>
+                <input asp-for="ConversionGoal.Name" class="form-control" />
+                <span asp-validation-for="ConversionGoal.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConversionGoal.Type" class="control-label"></label>
+                <input asp-for="ConversionGoal.Type" class="form-control" />
+                <span asp-validation-for="ConversionGoal.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConversionGoal.Value" class="control-label"></label>
+                <input asp-for="ConversionGoal.Value" class="form-control" />
+                <span asp-validation-for="ConversionGoal.Value" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConversionGoal.CreatedAt" class="control-label"></label>
+                <input asp-for="ConversionGoal.CreatedAt" class="form-control" />
+                <span asp-validation-for="ConversionGoal.CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConversionGoal.UpdatedAt" class="control-label"></label>
+                <input asp-for="ConversionGoal.UpdatedAt" class="form-control" />
+                <span asp-validation-for="ConversionGoal.UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

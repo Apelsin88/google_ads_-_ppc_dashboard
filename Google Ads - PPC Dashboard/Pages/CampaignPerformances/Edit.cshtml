@@ -1,0 +1,65 @@
+@page
+@model Google_Ads___PPC_Dashboard.Pages.CampaignPerformances.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>CampaignPerformance</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CampaignPerformance.Id" />
+            <div class="form-group">
+                <label asp-for="CampaignPerformance.CampaignId" class="control-label"></label>
+                <select asp-for="CampaignPerformance.CampaignId" class="form-control" asp-items="ViewBag.CampaignId"></select>
+                <span asp-validation-for="CampaignPerformance.CampaignId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CampaignPerformance.Date" class="control-label"></label>
+                <input asp-for="CampaignPerformance.Date" class="form-control" />
+                <span asp-validation-for="CampaignPerformance.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CampaignPerformance.Impressions" class="control-label"></label>
+                <input asp-for="CampaignPerformance.Impressions" class="form-control" />
+                <span asp-validation-for="CampaignPerformance.Impressions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CampaignPerformance.Clicks" class="control-label"></label>
+                <input asp-for="CampaignPerformance.Clicks" class="form-control" />
+                <span asp-validation-for="CampaignPerformance.Clicks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CampaignPerformance.Cost" class="control-label"></label>
+                <input asp-for="CampaignPerformance.Cost" class="form-control" />
+                <span asp-validation-for="CampaignPerformance.Cost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CampaignPerformance.Conversions" class="control-label"></label>
+                <input asp-for="CampaignPerformance.Conversions" class="form-control" />
+                <span asp-validation-for="CampaignPerformance.Conversions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CampaignPerformance.ConversionValue" class="control-label"></label>
+                <input asp-for="CampaignPerformance.ConversionValue" class="form-control" />
+                <span asp-validation-for="CampaignPerformance.ConversionValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

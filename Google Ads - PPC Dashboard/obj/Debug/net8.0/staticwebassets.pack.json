@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/Google Ads - PPC Dashboard.bundle.scp.css"
     },
     {
+      "Id": "/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/wwwroot/Google_Ads___PPC_Dashboard.styles.css",
+      "PackagePath": "staticwebassets/Google_Ads___PPC_Dashboard.styles.css"
+    },
+    {
       "Id": "/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

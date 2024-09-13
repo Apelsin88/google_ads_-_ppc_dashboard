@@ -26,6 +26,46 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard
 build_property._RazorSourceGeneratorDebug = 
 
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/AdGroups/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRHcm91cHMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/AdGroups/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRHcm91cHMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/AdGroups/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRHcm91cHMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/AdGroups/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRHcm91cHMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/AdGroups/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRHcm91cHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Ads/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Ads/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Ads/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Ads/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Ads/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXBwbGljYXRpb25Vc2Vycy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +84,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ApplicationUsers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXBwbGljYXRpb25Vc2Vycy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/CampaignPerformances/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FtcGFpZ25QZXJmb3JtYW5jZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/CampaignPerformances/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FtcGFpZ25QZXJmb3JtYW5jZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/CampaignPerformances/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FtcGFpZ25QZXJmb3JtYW5jZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/CampaignPerformances/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FtcGFpZ25QZXJmb3JtYW5jZXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/CampaignPerformances/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FtcGFpZ25QZXJmb3JtYW5jZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Campaigns/Create.cshtml]
@@ -66,12 +126,72 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FtcGFpZ25zL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ConversionGoals/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udmVyc2lvbkdvYWxzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ConversionGoals/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udmVyc2lvbkdvYWxzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ConversionGoals/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udmVyc2lvbkdvYWxzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ConversionGoals/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udmVyc2lvbkdvYWxzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/ConversionGoals/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udmVyc2lvbkdvYWxzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/CustomReports/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tUmVwb3J0cy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/CustomReports/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tUmVwb3J0cy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/CustomReports/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tUmVwb3J0cy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/CustomReports/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tUmVwb3J0cy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/CustomReports/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tUmVwb3J0cy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Keywords/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvS2V5d29yZHMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Keywords/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvS2V5d29yZHMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Keywords/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvS2V5d29yZHMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Keywords/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvS2V5d29yZHMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Keywords/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvS2V5d29yZHMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Login.cshtml]
@@ -82,8 +202,88 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/RefreshTokens/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVmcmVzaFRva2Vucy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/RefreshTokens/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVmcmVzaFRva2Vucy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/RefreshTokens/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVmcmVzaFRva2Vucy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/RefreshTokens/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVmcmVzaFRva2Vucy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/RefreshTokens/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVmcmVzaFRva2Vucy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Roles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUm9sZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Roles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUm9sZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Roles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUm9sZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Roles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUm9sZXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUm9sZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/UserDashboardSettings/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlckRhc2hib2FyZFNldHRpbmdzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/UserDashboardSettings/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlckRhc2hib2FyZFNldHRpbmdzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/UserDashboardSettings/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlckRhc2hib2FyZFNldHRpbmdzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/UserDashboardSettings/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlckRhc2hib2FyZFNldHRpbmdzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/UserDashboardSettings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlckRhc2hib2FyZFNldHRpbmdzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/UserRoles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlclJvbGVzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/UserRoles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlclJvbGVzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/UserRoles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlclJvbGVzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/UserRoles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlclJvbGVzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/UserRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlclJvbGVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/Pages/_ViewImports.cshtml]

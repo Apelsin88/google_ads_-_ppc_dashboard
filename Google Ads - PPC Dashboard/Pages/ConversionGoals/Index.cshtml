@@ -1,0 +1,60 @@
+@page
+@model Google_Ads___PPC_Dashboard.Pages.ConversionGoals.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConversionGoal[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConversionGoal[0].Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConversionGoal[0].Value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConversionGoal[0].CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConversionGoal[0].UpdatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ConversionGoal) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ConversionGoalId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ConversionGoalId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ConversionGoalId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

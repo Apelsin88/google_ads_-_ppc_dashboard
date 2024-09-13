@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Hvo33nfmVAhYMhZ73eOnaXURQPAIswkypuAwszxY16E=",
+  "Hash": "4eL3l+nIqzKedbXDy3xywuM1XzaDItBUuG9Lup1acFE=",
   "Source": "Google Ads - PPC Dashboard",
   "BasePath": "_content/Google Ads - PPC Dashboard",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/wwwroot/Google_Ads___PPC_Dashboard.styles.css",
+      "SourceId": "Google Ads - PPC Dashboard",
+      "SourceType": "Discovered",
+      "ContentRoot": "/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/wwwroot/",
+      "BasePath": "_content/Google Ads - PPC Dashboard",
+      "RelativePath": "Google_Ads___PPC_Dashboard.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Google_Ads___PPC_Dashboard.styles.css"
     },
     {
       "Identity": "/workspaces/google_ads_-_ppc_dashboard/Google Ads - PPC Dashboard/wwwroot/js/site.js",

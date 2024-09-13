@@ -1,0 +1,73 @@
+@page
+@model Google_Ads___PPC_Dashboard.Pages.Keywords.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Keyword</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Keyword.GoogleKeywordId" class="control-label"></label>
+                <input asp-for="Keyword.GoogleKeywordId" class="form-control" />
+                <span asp-validation-for="Keyword.GoogleKeywordId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Keyword.AdGroupId" class="control-label"></label>
+                <select asp-for="Keyword.AdGroupId" class ="form-control" asp-items="ViewBag.AdGroupId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Keyword.KeywordText" class="control-label"></label>
+                <input asp-for="Keyword.KeywordText" class="form-control" />
+                <span asp-validation-for="Keyword.KeywordText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Keyword.MatchType" class="control-label"></label>
+                <input asp-for="Keyword.MatchType" class="form-control" />
+                <span asp-validation-for="Keyword.MatchType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Keyword.Status" class="control-label"></label>
+                <input asp-for="Keyword.Status" class="form-control" />
+                <span asp-validation-for="Keyword.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Keyword.Bid" class="control-label"></label>
+                <input asp-for="Keyword.Bid" class="form-control" />
+                <span asp-validation-for="Keyword.Bid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Keyword.QualityScore" class="control-label"></label>
+                <input asp-for="Keyword.QualityScore" class="form-control" />
+                <span asp-validation-for="Keyword.QualityScore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Keyword.CreatedAt" class="control-label"></label>
+                <input asp-for="Keyword.CreatedAt" class="form-control" />
+                <span asp-validation-for="Keyword.CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Keyword.UpdatedAt" class="control-label"></label>
+                <input asp-for="Keyword.UpdatedAt" class="form-control" />
+                <span asp-validation-for="Keyword.UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

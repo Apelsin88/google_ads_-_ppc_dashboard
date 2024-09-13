@@ -1,0 +1,78 @@
+@page
+@model Google_Ads___PPC_Dashboard.Pages.Ads.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Ad</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ad.GoogleAdId" class="control-label"></label>
+                <input asp-for="Ad.GoogleAdId" class="form-control" />
+                <span asp-validation-for="Ad.GoogleAdId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad.AdGroupId" class="control-label"></label>
+                <select asp-for="Ad.AdGroupId" class ="form-control" asp-items="ViewBag.AdGroupId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad.AdType" class="control-label"></label>
+                <input asp-for="Ad.AdType" class="form-control" />
+                <span asp-validation-for="Ad.AdType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad.HeadlinePart1" class="control-label"></label>
+                <input asp-for="Ad.HeadlinePart1" class="form-control" />
+                <span asp-validation-for="Ad.HeadlinePart1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad.HeadlinePart2" class="control-label"></label>
+                <input asp-for="Ad.HeadlinePart2" class="form-control" />
+                <span asp-validation-for="Ad.HeadlinePart2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad.Description1" class="control-label"></label>
+                <input asp-for="Ad.Description1" class="form-control" />
+                <span asp-validation-for="Ad.Description1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad.FinalUrl" class="control-label"></label>
+                <input asp-for="Ad.FinalUrl" class="form-control" />
+                <span asp-validation-for="Ad.FinalUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad.Status" class="control-label"></label>
+                <input asp-for="Ad.Status" class="form-control" />
+                <span asp-validation-for="Ad.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad.CreatedAt" class="control-label"></label>
+                <input asp-for="Ad.CreatedAt" class="form-control" />
+                <span asp-validation-for="Ad.CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad.UpdatedAt" class="control-label"></label>
+                <input asp-for="Ad.UpdatedAt" class="form-control" />
+                <span asp-validation-for="Ad.UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

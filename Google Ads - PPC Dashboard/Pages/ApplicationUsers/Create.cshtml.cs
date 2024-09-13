@@ -1,17 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Google_Ads___PPC_Dashboard.Data;
 using Google_Ads___PPC_Dashboard.Models;
-using Google_Ads___PPC_Dashboard.Services;
 
 namespace Google_Ads___PPC_Dashboard.Pages.ApplicationUsers
 {
     public class CreateModel : PageModel
     {
-        private readonly IApplicationUserService _applicationUserService;
+        private readonly Google_Ads___PPC_Dashboard.Data.Google_Ads___PPC_DashboardContext _context;
 
-        public CreateModel(IApplicationUserService applicationUserService)
+        public CreateModel(Google_Ads___PPC_Dashboard.Data.Google_Ads___PPC_DashboardContext context)
         {
-            _applicationUserService = applicationUserService;
+            _context = context;
         }
 
         public IActionResult OnGet()
@@ -20,8 +25,9 @@ namespace Google_Ads___PPC_Dashboard.Pages.ApplicationUsers
         }
 
         [BindProperty]
-        public ApplicationUser ApplicationUser { get; set; } = new ApplicationUser();
+        public ApplicationUser ApplicationUser { get; set; } = default!;
 
+        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -29,7 +35,8 @@ namespace Google_Ads___PPC_Dashboard.Pages.ApplicationUsers
                 return Page();
             }
 
-            await _applicationUserService.AddApplicationUserAsync(ApplicationUser);
+            _context.ApplicationUsers.Add(ApplicationUser);
+            await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
         }
