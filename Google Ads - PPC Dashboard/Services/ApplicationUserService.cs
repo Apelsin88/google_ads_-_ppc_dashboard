@@ -1,59 +1,45 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Google_Ads___PPC_Dashboard.Data;
 using Google_Ads___PPC_Dashboard.Models;
-using Google_Ads___PPC_Dashboard.Data;
-
+using Microsoft.EntityFrameworkCore;
 namespace Google_Ads___PPC_Dashboard.Services
 {
     public class ApplicationUserService : IApplicationUserService
     {
-        private readonly Google_Ads___PPC_DashboardContext _dbContext;
-
+        Google_Ads___PPC_DashboardContext DbContext;
         public ApplicationUserService(Google_Ads___PPC_DashboardContext dbContext)
         {
-            _dbContext = dbContext;
+            DbContext = dbContext;
         }
 
         public async Task<IEnumerable<ApplicationUser>> GetAllApplicationUsersAsync()
         {
-            return await _dbContext.ApplicationUsers
-                .Include(u => u.CustomReports)
-                .Include(u => u.UserDashboardSettings)
-                .Include(u => u.RefreshTokens)
-                .Include(u => u.UserRoles)
-                .ToListAsync();
+            return await DbContext.ApplicationUsers.ToListAsync();
         }
 
-        public async Task<ApplicationUser?> GetApplicationUserByIdAsync(string id)
+        public async Task<ApplicationUser> GetApplicationUserByIdAsync(int id)
         {
-            return await _dbContext.ApplicationUsers
-                .Include(u => u.CustomReports)
-                .Include(u => u.UserDashboardSettings)
-                .Include(u => u.RefreshTokens)
-                .Include(u => u.UserRoles)
-                .FirstOrDefaultAsync(u => u.Id == id);
+            return await DbContext.ApplicationUsers.FindAsync(id);
         }
 
-        public async Task AddApplicationUserAsync(ApplicationUser user)
+        public async Task AddApplicationUserAsync(ApplicationUser applicationUser)
         {
-            await _dbContext.ApplicationUsers.AddAsync(user);
-            await _dbContext.SaveChangesAsync();
+            DbContext.ApplicationUsers.Add(applicationUser);
+            await DbContext.SaveChangesAsync();
         }
 
-        public async Task UpdateApplicationUserAsync(ApplicationUser user)
+        public async Task UpdateApplicationUserAsync(ApplicationUser applicationUser)
         {
-            _dbContext.ApplicationUsers.Update(user);
-            await _dbContext.SaveChangesAsync();
+            DbContext.ApplicationUsers.Update(applicationUser);
+            await DbContext.SaveChangesAsync();
         }
 
-        public async Task DeleteApplicationUserAsync(string id)
+        public async Task DeleteApplicationUser(int id)
         {
-            var user = await _dbContext.ApplicationUsers.FindAsync(id);
-            if (user != null)
+            var applicationUser = await DbContext.ApplicationUsers.FindAsync(id);
+            if (applicationUser != null)
             {
-                _dbContext.ApplicationUsers.Remove(user);
-                await _dbContext.SaveChangesAsync();
+                DbContext.ApplicationUsers.Remove(applicationUser);
+                await DbContext.SaveChangesAsync();
             }
         }
     }

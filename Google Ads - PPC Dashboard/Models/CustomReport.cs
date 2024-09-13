@@ -1,24 +1,18 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Google_Ads___PPC_Dashboard.Models
 {
+
     public class CustomReport
     {
         public int Id { get; set; }
-
-        public string UserId { get; set; } = null!;
-
-        public ApplicationUser User { get; set; } = null!; // Navigation Property
-
-        public string Name { get; set; } = null!;
-
-        public string Configuration { get; set; } = null!;
-
+        public string UserId { get; set; }
+        public ApplicationUser User { get; set; } // Navigation Property
+        public string Name { get; set; }
+        public string Configuration { get; set; }
         [DataType(DataType.Date)]
         public DateTime CreatedAt { get; set; }
-
         [DataType(DataType.Date)]
-        public DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; set;}
     }
 }
