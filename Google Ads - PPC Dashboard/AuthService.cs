@@ -24,8 +24,6 @@ namespace Google_Ads___PPC_Dashboard
 
             var token = handler.CreateToken(tokenDescriptor);
             return handler.WriteToken(token);
-
-            
         }
 
         private static ClaimsIdentity GenerateClaims(ApplicationUser user)
@@ -37,9 +35,9 @@ namespace Google_Ads___PPC_Dashboard
             ci.AddClaim(new Claim(ClaimTypes.GivenName, user.FirstName));
             ci.AddClaim(new Claim(ClaimTypes.Email, user.Email));
 
-            foreach (UserRole role in user.UserRoles)
+            foreach (UserRole userRole in user.UserRoles)
             {
-                ci.AddClaim(new Claim(ClaimTypes.Role, UserRole.RoleId.ToString));
+                ci.AddClaim(new Claim(ClaimTypes.Role, userRole.Role.Name));
             }
 
             return ci;
