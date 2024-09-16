@@ -21,6 +21,8 @@ namespace Google_Ads___PPC_Dashboard
             builder.Services.AddRazorPages();
             builder.Services.AddControllers();
 
+            builder.Services.AddAuthentication();
+
             // Registrera alla dina tjänster för Dependency Injection
             builder.Services.AddScoped<IAdService, AdService>();
             builder.Services.AddScoped<IAdGroupService, AdGroupService>();
