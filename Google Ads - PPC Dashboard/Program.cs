@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Google_Ads___PPC_Dashboard.Models;
 using System.Text;
+using Microsoft.AspNetCore.Identity.Data;
 
 namespace Google_Ads___PPC_Dashboard
 {
@@ -33,9 +34,11 @@ namespace Google_Ads___PPC_Dashboard
                 };
             });
 
-            builder.Services.AddAuthorization(x =>
+            builder.Services.AddAuthorization(options =>
             {
-                x.AddPolicy("tech", p => p.RequireRole("developer"));
+                options.AddPolicy("AdminPolicy", policy => policy.RequireRole("Admin"));
+                options.AddPolicy("PPCAnalystPolicy", policy => policy.RequireRole("PPC-Analyst"));
+                options.AddPolicy("CustomerPolicy", policy => policy.RequireRole("Customer"));
             });
 
             // Konfigurera Entity Framework och databaskontexten
@@ -80,24 +83,41 @@ namespace Google_Ads___PPC_Dashboard
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.MapGet("/login", (AuthService service) =>
-            {
-                var user = new ApplicationUser(
-                    1,
-                    "bruno.bernardes",
-                    "Bruno Bernardes",
-                    "bruno@gmail.com",
-                    "q1w2e3r4t5",
-                    ["developer"]);
+            // alternativ 1
+            //app.MapGet("/login", (AuthService service) =>
+            //{
+            //    var user = new ApplicationUser(
+            //        1,
+            //        "bruno.bernardes",
+            //        "Bruno Bernardes",
+            //        "bruno@gmail.com",
+            //        "q1w2e3r4t5",
+            //        ["developer"]);
 
-                return service.Create(user);
+            //    return service.Create(user);
+            //});
+
+            // alternativ 2
+            app.MapPost("/login", async (AuthService service, /*[FromBody]*/ LoginRequest loginRequest) =>
+            {
+                var user = await AuthenticateUser(loginRequest.Username, loginRequest.Password);
+                if (user == null)
+                {
+                    return Results.Unauthorized();
+                }
+
+                var token = service.Create(user);
+                return Results.Ok(new { Token = token });
             });
 
-            app.MapGet("/test", () => "OK!")
-                .RequireAuthorization();
+            app.MapGet("/admin", () => "Admin content")
+                .RequireAuthorization("AdminPolicy");
 
-            app.MapGet("/test/tech", () => "tech OK!")
-                .RequireAuthorization("tech");
+            app.MapGet("/ppc-analyst", () => "PPC Analyst content")
+                .RequireAuthorization("PPCAnalystPolicy");
+
+            app.MapGet("/customer", () => "Customer content")
+                .RequireAuthorization("CustomerPolicy");
 
             // Mappa Razor Pages och Controllers
             app.MapRazorPages();

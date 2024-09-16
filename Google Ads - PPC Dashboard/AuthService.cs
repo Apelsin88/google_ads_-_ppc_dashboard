@@ -32,7 +32,6 @@ namespace Google_Ads___PPC_Dashboard
 
             ci.AddClaim(new Claim("id", user.Id.ToString()));
             ci.AddClaim(new Claim(ClaimTypes.Name, user.Username));
-            ci.AddClaim(new Claim(ClaimTypes.GivenName, user.FirstName));
             ci.AddClaim(new Claim(ClaimTypes.Email, user.Email));
 
             foreach (UserRole userRole in user.UserRoles)

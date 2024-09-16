@@ -917,3 +917,4 @@ C:\Users\JA365\source\repos\New folder\google_ads_-_ppc_dashboard\Google Ads - P
 C:\Users\JA365\source\repos\New folder\google_ads_-_ppc_dashboard\Google Ads - PPC Dashboard\obj\Debug\net8.0\ref\Google Ads - PPC Dashboard.dll
 C:\Users\JA365\source\repos\New folder\google_ads_-_ppc_dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\JA365\source\repos\New folder\google_ads_-_ppc_dashboard\Google Ads - PPC Dashboard\obj\Debug\net8.0\Google Ads - PPC Dashboard.csproj.CopyComplete
+C:\Users\JA365\source\repos\New folder\google_ads_-_ppc_dashboard\Google Ads - PPC Dashboard\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
