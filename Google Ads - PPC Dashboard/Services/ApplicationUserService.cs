@@ -38,7 +38,7 @@ namespace Google_Ads___PPC_Dashboard.Services
                 .FirstOrDefaultAsync(u => u.Id == id);
         }
 
-
+        //////////////Alternativ 1 /////////////////////////
         public async Task AddApplicationUserAsync(ApplicationUser user)
         {
 

@@ -52,36 +52,36 @@ namespace Google_Ads___PPC_Dashboard
             return ci;
         }
 
-        public async Task<ApplicationUser?> AuthenticateUser(string username, string password)
-        {
-            // Retrieve the user by username
-            var user = await _dbContext.ApplicationUsers
-                .Include(u => u.UserRoles)
-                    .ThenInclude(ur => ur.Role)
-                .FirstOrDefaultAsync(u => u.Username == username);
+        //public async Task<ApplicationUser?> AuthenticateUser(string username, string password)
+        //{
+        //    // Retrieve the user by username
+        //    var user = await _dbContext.ApplicationUsers
+        //        .Include(u => u.UserRoles)
+        //            .ThenInclude(ur => ur.Role)
+        //        .FirstOrDefaultAsync(u => u.Username == username);
 
-            if (user == null)
-            {
-                // User not found
-                return null;
-            }
+        //    if (user == null)
+        //    {
+        //        // User not found
+        //        return null;
+        //    }
 
-            // Verify the password
-            if (!VerifyPassword(password, user.PasswordHash))
-            {
-                // Password does not match
-                return null;
-            }
+        //    // Verify the password
+        //    if (!VerifyPassword(password, user.PasswordHash))
+        //    {
+        //        // Password does not match
+        //        return null;
+        //    }
 
-            // Authentication successful
-            return user;
-        }
+        //    // Authentication successful
+        //    return user;
+        //}
 
-        private bool VerifyPassword(string password, string passwordHash)
-        {
-            // Implement password verification here
-            return BCrypt.Net.BCrypt.Verify(password, passwordHash);
-        }
+        //private bool VerifyPassword(string password, string passwordHash)
+        //{
+        //    // Implement password verification here
+        //    return BCrypt.Net.BCrypt.Verify(password, passwordHash);
+        //}
 
     }
 }
