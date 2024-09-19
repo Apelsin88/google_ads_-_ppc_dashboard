@@ -54,6 +54,7 @@ namespace Google_Ads___PPC_Dashboard
             // Registrera alla dina tjänster för Dependency Injection
             builder.Services.AddScoped<IAdService, AdService>();
             builder.Services.AddScoped<IAdGroupService, AdGroupService>();
+            builder.Services.AddScoped<AuthService>();
             builder.Services.AddScoped<IApplicationUserService, ApplicationUserService>();
             builder.Services.AddScoped<ICampaignService, CampaignService>();
             builder.Services.AddScoped<ICampaignPerformanceService, CampaignPerformanceService>();
@@ -98,17 +99,17 @@ namespace Google_Ads___PPC_Dashboard
             //});
 
             // alternativ 2
-            app.MapPost("/login", async (AuthService service, /*[FromBody]*/ LoginRequest loginRequest) =>
-            {
-                var user = await AuthenticateUser(loginRequest.Username, loginRequest.Password);
-                if (user == null)
-                {
-                    return Results.Unauthorized();
-                }
+            //app.MapPost("/login", async (AuthService service, /*[FromBody]*/ LoginRequest loginRequest) =>
+            //{
+            //    var user = await service.AuthenticateUser(loginRequest.Username, loginRequest.Password);
+            //    if (user == null)
+            //    {
+            //        return Results.Unauthorized();
+            //    }
 
-                var token = service.Create(user);
-                return Results.Ok(new { Token = token });
-            });
+            //    var token = service.Create(user);
+            //    return Results.Ok(new { Token = token });
+            //});
 
             app.MapGet("/admin", () => "Admin content")
                 .RequireAuthorization("AdminPolicy");

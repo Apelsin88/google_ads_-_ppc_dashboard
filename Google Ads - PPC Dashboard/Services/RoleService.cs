@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Google_Ads___PPC_Dashboard.Models;
 using Google_Ads___PPC_Dashboard.Data;
+using Google.Api;
 
 namespace Google_Ads___PPC_Dashboard.Services
 {
@@ -50,6 +51,31 @@ namespace Google_Ads___PPC_Dashboard.Services
             {
                 _dbContext.Roles.Remove(role);
                 await _dbContext.SaveChangesAsync();
+            }
+        }
+
+        //Svar1
+        public async Task AssignRoleAsync(ApplicationUser user, string roleName)
+        {
+            var role = await _dbContext.Roles.FirstOrDefaultAsync(r => r.Name == roleName);
+
+            if (role != null)
+            {
+                var userRole = new UserRole
+                {
+                    UserId = user.Id,
+                    RoleId = role.Id,
+                    User = user,
+                    Role = role
+                };
+
+                //user.UserRoles.Add(userRole);  //kombi av fran alternativ 2 kanske?
+                _dbContext.UserRoles.Add(userRole);
+                await _dbContext.SaveChangesAsync();
+            }
+            else
+            {
+                throw new Exception("Role not found");
             }
         }
     }
