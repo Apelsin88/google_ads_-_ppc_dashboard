@@ -4,7 +4,22 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome :)</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid" style="height: 100vh;">
+    <div class="row h-100">
+        <!-- Left-side elements/buttons -->
+        <div class="col-3 d-flex flex-column justify-content-center align-items-start">
+            <button class="btn btn-primary mb-3" onclick="window.location.href='/Campaigns'">Campaigns</button>
+            <br />
+            <button class="btn btn-primary mb-3" onclick="window.location.href='/AdGroups'">Ad Groups</button>
+            <br />
+            <button class="btn btn-primary mb-3" onclick="window.location.href='/Reports'">Reports</button>
+            <!-- Add more buttons as necessary -->
+        </div>
+
+        <!-- Optional content in the middle -->
+        <div class="col-9">
+            <h1>Welcome to the Dashboard</h1>
+            <p>Manage your ads, campaigns, and reports from here.</p>
+        </div>
+    </div>
 </div>

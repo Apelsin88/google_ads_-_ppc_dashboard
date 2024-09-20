@@ -5,6 +5,8 @@ namespace Google_Ads___PPC_Dashboard.Pages
 {
     public class IndexModel : PageModel
     {
+        public string UserName { get; set; }
+
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Ads.GoogleAds.V16.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -26,5 +27,8 @@ namespace Google_Ads___PPC_Dashboard.Models
 
         // Relationship: One-to-Many with Keywords
         public ICollection<Keyword> Keywords { get; set; } = new List<Keyword>();
+
     }
+    
+
 }

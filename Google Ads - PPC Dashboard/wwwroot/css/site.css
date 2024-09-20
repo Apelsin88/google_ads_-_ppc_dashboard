@@ -1,8 +1,35 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #343a40;
-  padding-top: 56px;
+    margin-bottom: 60px;
+}
+
+
+
+
+
+/*body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1b1b1b;
+    color: white;
+    padding-top: 56px;
 }
 
 .navbar {
@@ -28,6 +55,30 @@ h1 {
   color: #007bff;
 }
 
+h1 {
+    font-family: 'Overwatch', sans-serif;
+    color: #ffa500;  Overwatch theme color 
+}
+
+button.btn {
+    width: 200px;
+    text-align: left;
+    font-size: 18px;
+    background-color: #ffa500;
+    border-color: #ffa500;
+}
+
+ Add this to your site.css or inline 
+.full-height {
+    height: 100vh;
+}
+
+.centered-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  Adjust as needed for left alignment 
+}
+
 .footer {
   text-align: center;
   padding: 1rem 0;
@@ -36,4 +87,84 @@ h1 {
   bottom: 0;
   width: 100%;
   border-top: 1px solid #e5e5e5;
+}*/
+
+
+
+
+
+
+
+
+/* General Reset */
+/** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+/* Body styling */
+/*body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;*/ /* Dark background */
+    /*color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}*/
+
+/* Header styling */
+/*header {
+    background-color: #333;
+    padding: 10px;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}*/
+
+/* Custom layout for home page */
+/*.container-fluid {
+    display: flex;
+    height: calc(100vh - 60px);*/ /* Adjust based on your header height */
+/*}*/
+
+/* Left-side buttons */
+/*.left-section {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.left-section button {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffa500;*/ /* Overwatch-like orange */
+    /*border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    width: 80%;
+
+}
+.left-section button:hover {
+    background-color: #ff8c00;*/ /* Hover effect */
+
+/*}*/
+
+/* Right-side content */
+/*.right-section {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.right-section h1 {
+    font-size: 36px;
+    color: #ffa500;*/ /* Overwatch-like orange */
+/*}*/

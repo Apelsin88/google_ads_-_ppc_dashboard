@@ -45,6 +45,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Chart.js": {
+              "target": "Package",
+              "version": "[3.7.1, )"
+            },
             "Google.Ads.GoogleAds": {
               "target": "Package",
               "version": "[21.0.0, )"

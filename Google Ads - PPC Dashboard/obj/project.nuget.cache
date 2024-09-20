@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Lhqw3a+zYp9y9lWDp+plEMPQZBRGmkFicSbgQ9w+9muz/vfDGJW292jURvozOsXmoqwmz9/02NV7jdVc+t/RzQ==",
+  "dgSpecHash": "XReP4Tl4tshJivW3ARRT1BaJWHZSW3LCJgOQWRUZ5rPWgdPnPbijqVpw1QJd4Ygt4GSp/gqzIIjdgg6XYRQWbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\JA365\\source\\repos\\New folder\\google_ads_-_ppc_dashboard\\Google Ads - PPC Dashboard\\Google Ads - PPC Dashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JA365\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\JA365\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\JA365\\.nuget\\packages\\chart.js\\3.7.1\\chart.js.3.7.1.nupkg.sha512",
     "C:\\Users\\JA365\\.nuget\\packages\\commandlineparser\\2.9.1\\commandlineparser.2.9.1.nupkg.sha512",
     "C:\\Users\\JA365\\.nuget\\packages\\google.ads.gax\\4.0.1\\google.ads.gax.4.0.1.nupkg.sha512",
     "C:\\Users\\JA365\\.nuget\\packages\\google.ads.googleads\\21.0.0\\google.ads.googleads.21.0.0.nupkg.sha512",
