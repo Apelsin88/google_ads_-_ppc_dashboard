@@ -26,5 +26,6 @@ namespace Google_Ads___PPC_Dashboard.Pages.CampaignPerformances
             CampaignPerformance = await _context.CampaignPerformances
                 .Include(c => c.Campaign).ToListAsync();
         }
+
     }
 }

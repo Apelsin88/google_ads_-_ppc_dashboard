@@ -19,11 +19,11 @@ namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
             _context = context;
         }
 
-        public IList<Campaign> Campaign { get;set; } = default!;
+        public IList<Campaign> Campaigns { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Campaign = await _context.Campaigns.ToListAsync();
+            Campaigns = await _context.Campaigns.ToListAsync();
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XReP4Tl4tshJivW3ARRT1BaJWHZSW3LCJgOQWRUZ5rPWgdPnPbijqVpw1QJd4Ygt4GSp/gqzIIjdgg6XYRQWbw==",
+  "dgSpecHash": "70cl+3TuZdAmNqSgKTQL2mHTcJ1HSQ0rGRlj4PMZ52MySoiQVk3GB4ypd5iCL1Gtvzd9EryZAWrk4lbIzMFIjA==",
   "success": true,
   "projectFilePath": "C:\\Users\\JA365\\source\\repos\\New folder\\google_ads_-_ppc_dashboard\\Google Ads - PPC Dashboard\\Google Ads - PPC Dashboard.csproj",
   "expectedPackageFiles": [
@@ -14,9 +14,9 @@
     "C:\\Users\\JA365\\.nuget\\packages\\google.api.commonprotos\\2.15.0\\google.api.commonprotos.2.15.0.nupkg.sha512",
     "C:\\Users\\JA365\\.nuget\\packages\\google.api.gax\\4.8.0\\google.api.gax.4.8.0.nupkg.sha512",
     "C:\\Users\\JA365\\.nuget\\packages\\google.api.gax.grpc\\4.8.0\\google.api.gax.grpc.4.8.0.nupkg.sha512",
-    "C:\\Users\\JA365\\.nuget\\packages\\google.apis\\1.67.0\\google.apis.1.67.0.nupkg.sha512",
-    "C:\\Users\\JA365\\.nuget\\packages\\google.apis.auth\\1.67.0\\google.apis.auth.1.67.0.nupkg.sha512",
-    "C:\\Users\\JA365\\.nuget\\packages\\google.apis.core\\1.67.0\\google.apis.core.1.67.0.nupkg.sha512",
+    "C:\\Users\\JA365\\.nuget\\packages\\google.apis\\1.68.0\\google.apis.1.68.0.nupkg.sha512",
+    "C:\\Users\\JA365\\.nuget\\packages\\google.apis.auth\\1.68.0\\google.apis.auth.1.68.0.nupkg.sha512",
+    "C:\\Users\\JA365\\.nuget\\packages\\google.apis.core\\1.68.0\\google.apis.core.1.68.0.nupkg.sha512",
     "C:\\Users\\JA365\\.nuget\\packages\\google.longrunning\\3.0.0\\google.longrunning.3.0.0.nupkg.sha512",
     "C:\\Users\\JA365\\.nuget\\packages\\google.protobuf\\3.25.0\\google.protobuf.3.25.0.nupkg.sha512",
     "C:\\Users\\JA365\\.nuget\\packages\\grpc.auth\\2.60.0\\grpc.auth.2.60.0.nupkg.sha512",

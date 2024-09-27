@@ -8,6 +8,9 @@ using Microsoft.IdentityModel.Tokens;
 using Google_Ads___PPC_Dashboard.Models;
 using System.Text;
 using Microsoft.AspNetCore.Identity.Data;
+using Google.Ads.GoogleAds.Lib;
+using Google.Apis.Auth.OAuth2;
+using Google.Ads.GoogleAds.Config;
 
 namespace Google_Ads___PPC_Dashboard
 {
@@ -15,6 +18,13 @@ namespace Google_Ads___PPC_Dashboard
     {
         public static void Main(string[] args)
         {
+
+            //GoogleAdsClient client = new GoogleAdsClient();
+            //string refreshToken = client.Config.OAuth2ClientSecrets.RefreshToken;
+            //System.Console.WriteLine($"Refresh Token: {refreshToken}");
+
+
+
             // Skapa en builder för att konfigurera tjänster och appen
             var builder = WebApplication.CreateBuilder(args);
 

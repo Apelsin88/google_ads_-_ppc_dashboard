@@ -7,25 +7,19 @@ namespace Google_Ads___PPC_Dashboard.Pages
 {
     public class LoginModel : PageModel
     {
+        /// Funkar med IApplicationUserService men inte med en vanlig ApplicationUserService
         public int userSum = 0;
+        private readonly Google_Ads___PPC_Dashboard.Services.IApplicationUserService? UserService;
 
-        //public IList<ApplicationUser> users { get; set; } = default!;
-        
-        private readonly ApplicationUserService UserService;
-
-        public LoginModel(ApplicationUserService userService)
+        public LoginModel(IApplicationUserService userService)
         {
             UserService = userService;
         }
 
-        public void OnGet()
+        public IList<ApplicationUser> users { get; set; } = default!;
+        public async Task OnGetAsync()
         {
-            
+            users = (IList<ApplicationUser>)await UserService.GetAllApplicationUsersAsync();
         }
-
-        //public async Task OnGetAsync()
-        //{
-        //    users = (IList<ApplicationUser>)await UserService.GetAllApplicationUsersAsync();
-        //}
     }
 }
