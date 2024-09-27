@@ -29,3 +29,34 @@ a:hover {
     bottom: 0;
     width: 100%;
 }
+
+
+        /* fran WebbBroCode i VS*/
+.Productbox {
+    display: inline-block;
+    border-radius: 5%;
+    border: 2px solid hsl(0, 0%, 65%);
+    margin: 5px;
+    width: 150px;
+}
+
+.Productbox:hover {
+    border: 2px solid hsl(0, 0%, 14%);
+}
+
+.Productbox img {
+    border-radius: 5%;
+    width: 100%;
+    height: auto;
+}
+
+.Productbox .Pinfo {
+    border-radius: 5%;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+.Pinfo p {
+    display: inline-block;
+}

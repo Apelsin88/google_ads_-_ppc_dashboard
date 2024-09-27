@@ -5,3 +5,109 @@
 }
 
 <h1>CampaignsOverview</h1>
+
+<div class="Productbox">
+    <a href="">
+        <img src="Bilder\japan-1805865_1280.jpg">
+    </a>
+    <div class="Pinfo">
+        <p>@Html.DisplayNameFor(model => model.Campaigns[2].Name)</p>
+        <div class="buy">
+            <button id="buyButton1">Buy</button>
+            <p>60kr</p>
+        </div>
+
+    </div>
+</div>
+
+@foreach (var item in Model.Campaigns)
+{
+    <div class="Productbox">
+        <a href="">
+            <img src="Bilder\japan-1805865_1280.jpg">
+        </a>
+        <div class="Pinfo">
+            @Html.DisplayFor(modelItem => item.Name)
+            <div class="buy">
+                <button id="buyButton1">Buy</button>
+                <p>60kr</p>
+            </div>
+
+        </div>
+    </div>
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaigns[0].GoogleCampaignId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaigns[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaigns[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaigns[0].Budget)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaigns[0].BudgetType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaigns[0].StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaigns[0].EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaigns[0].CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Campaigns[0].UpdatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Campaigns)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoogleCampaignId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Budget)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BudgetType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdatedAt)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
