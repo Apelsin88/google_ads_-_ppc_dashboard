@@ -35,5 +35,16 @@ namespace Google_Ads___PPC_Dashboard.Models
 
         // One-to-Many with CampaignPerformance
         public ICollection<CampaignPerformance> Performances { get; set; } = new List<CampaignPerformance>();
+
+        public int GetNumberOfAds(ICollection<AdGroup> adGroups)
+        {
+            int numberOfAds = 0;
+            foreach (AdGroup adGroup in adGroups)
+            {
+                numberOfAds += adGroup.Ads.Count;
+
+            }
+            return numberOfAds;
+        }
     }
 }

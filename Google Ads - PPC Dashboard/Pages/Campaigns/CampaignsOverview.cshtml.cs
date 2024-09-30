@@ -9,6 +9,7 @@ namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
 {
     public class CampaignsOverviewModel : PageModel
     {
+
         private readonly Google_Ads___PPC_Dashboard.Services.ICampaignService? CampaignService;
 
         public IList<Campaign> Campaigns { get; set; } = default!;
