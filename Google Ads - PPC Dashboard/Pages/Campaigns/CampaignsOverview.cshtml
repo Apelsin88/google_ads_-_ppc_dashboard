@@ -26,14 +26,13 @@
             <br />
         </div>
     </div>
-
     <div class="row">
-        <div class="col-6 bg-info p-4">
-            .col-8
-            <div class="row">
-                @foreach (var item in Model.Campaigns)
-                {
-                    <div class="Productbox">
+        <div class="col-6 bg-info" style="height: 80vh; overflow-y: auto;">
+            <h4>Campaigns</h4>
+            @foreach (var item in Model.Campaigns)
+            {
+                <a asp-page="./Details" asp-route-id="@item.Id" class="productbox-link">
+                    <div class="Productbox" onclick="">
                         <div class="Pinfo">
                             @Html.DisplayFor(modelItem => item.Name)
                             <br />
@@ -43,38 +42,111 @@
                                 string numberOfAds = item.GetNumberOfAds(item.AdGroups).ToString();
                             }
                             <label>Ads @Html.DisplayFor(modelItem => numberOfAds) St</label>
-                            <br />
-                            @Html.DisplayFor(modelItem => item.CreatedAt)
-
-
                         </div>
                     </div>
-                }
+                </a>
+                
+                @* <div class="Productbox">
+            <div class="Pinfo">
+            <h5>@Html.DisplayFor(modelItem => item.Name)</h5>
+            <p>Budget: @Html.DisplayFor(modelItem => item.Budget) Kr</p>
+            <p>Ads: @Html.DisplayFor(modelItem => item.AdGroups.Count)</p>
+            <p>Created: @Html.DisplayFor(modelItem => item.CreatedAt)</p>
             </div>
+            </div> *@
+            }
         </div>
-        <div class="col-6 bg-info p-4">.col-4>
-            <div class="row">
-                <canvas id="myChart" width="200" height="100"></canvas>
+        <div class="col-6">
+            <div class="d-grid gap-4" style="grid-template-rows: repeat(2, 1fr); grid-template-columns: 1fr 1fr; height: 80vh;">
+                <div class="p-3 bg-success">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Click Through Rate</td>
+                                <td>5%</td>
+                            </tr>
+                            <tr>
+                                <td>Conversion Rate</td>
+                                <td>3%</td>
+                            </tr>
+                            <tr>
+                                <td>Average CPC</td>
+                                <td>1.20 Kr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-3 bg-light">
+                    <canvas id="myPieChart" width="200" height="100"></canvas>
+                </div>
+                <div class="p-3 bg-light col-span-2">
+                    <canvas id="myLineChart" width="400" height="200"></canvas>
+                </div>
             </div>
-            <div class="row">
-                asdfasdf
-            </div>
-            
         </div>
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+
+@{
+    var chartLabels = Model.Campaigns.Select(c => c.Name).ToArray();
+    var chartData = Model.Campaigns.Select(c => c.Budget).ToArray();
+}
 <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
+    var ctx = document.getElementById('myPieChart').getContext('2d');
+    var myPieChart = new Chart(ctx, {
         type: 'pie', // You can change this to 'line', 'pie', etc.
+        data: {
+            labels: @Html.Raw(Json.Serialize(chartLabels)),  // Dynamically pass campaign names as labels
+            datasets: [{
+                label: 'Campaign Budget',
+                data: @Html.Raw(Json.Serialize(chartData)),  // Dynamically pass campaign budgets as data
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    var ctx = document.getElementById('myLineChart').getContext('2d');
+    var myLineChart = new Chart(ctx, {
+        type: 'line', // You can change this to 'line', 'pie', etc.
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
             datasets: [{
                 label: '# of Votes',
-                data: [12, 11, 3, 5, 2, 3],
+                data: [12, 11, 3, 5, 2, 3],  //@Model grejor här :) ?
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -105,7 +177,7 @@
 </script>
 
 
-<table class="table">
+@* <table class="table">
     <thead>
         <tr>
             <th>
@@ -177,4 +249,4 @@
             </tr>
         }
     </tbody>
-</table>
+</table> *@

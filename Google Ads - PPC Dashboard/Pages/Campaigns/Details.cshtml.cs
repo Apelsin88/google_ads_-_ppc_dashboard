@@ -7,36 +7,45 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Google_Ads___PPC_Dashboard.Data;
 using Google_Ads___PPC_Dashboard.Models;
+using Google_Ads___PPC_Dashboard.Services;
 
 namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
 {
     public class DetailsModel : PageModel
     {
-        private readonly Google_Ads___PPC_Dashboard.Data.Google_Ads___PPC_DashboardContext _context;
+        private readonly Google_Ads___PPC_Dashboard.Services.ICampaignService? CampaignService;
 
-        public DetailsModel(Google_Ads___PPC_Dashboard.Data.Google_Ads___PPC_DashboardContext context)
-        {
-            _context = context;
-        }
-
+        //public IList<Campaign> Campaign { get; set; } = default!;
         public Campaign Campaign { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public DetailsModel(ICampaignService campaginService)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            CampaignService = campaginService;
+        }
 
-            var campaign = await _context.Campaigns.FirstOrDefaultAsync(m => m.Id == id);
-            if (campaign == null)
-            {
-                return NotFound();
-            }
-            else
-            {
-                Campaign = campaign;
-            }
+        //public async Task<IActionResult> OnGetAsync(int id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    var campaign = await CampaignService.GetCampaignByIdAsync(id);
+        //    if (campaign == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    else
+        //    {
+        //        Campaign = (IList<Campaign>) campaign;
+        //    }
+        //    return Page();
+        //}
+        public async Task<IActionResult> OnGetAsync(int id)
+        {
+
+            Campaign = await CampaignService.GetCampaignByIdAsync(id);
+
             return Page();
         }
     }

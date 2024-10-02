@@ -36,9 +36,16 @@ a:hover {
     display: inline-block;
     border-radius: 5%;
     border: 2px solid hsl(0, 0%, 65%);
-    margin: 5px;
+    margin: 2px;
     width: 150px;
 }
+
+/*.productbox-link {
+    display: block;*/ /* Make the link take up the full box */
+    /*text-decoration: none;*/ /* Remove underline from the link */
+    /*color: inherit;*/ /* Inherit text color to make it look like normal text */
+/*}*/
+
 
 .Productbox:hover {
     border: 2px solid hsl(0, 0%, 14%);
