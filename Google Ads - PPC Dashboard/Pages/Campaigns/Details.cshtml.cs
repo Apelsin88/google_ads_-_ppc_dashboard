@@ -14,38 +14,24 @@ namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
     public class DetailsModel : PageModel
     {
         private readonly Google_Ads___PPC_Dashboard.Services.ICampaignService? CampaignService;
+        private readonly Google_Ads___PPC_Dashboard.Services.IAdGroupService? AdGroupService;
 
         //public IList<Campaign> Campaign { get; set; } = default!;
         public Campaign Campaign { get; set; } = default!;
+        public IList<AdGroup> AdGroups { get; set; } = default!;
+        public IList<Ad> Ads { get; set; } = default!;
 
-        public DetailsModel(ICampaignService campaginService)
+        public DetailsModel(ICampaignService campaginService, IAdGroupService adGroupService)
         {
             CampaignService = campaginService;
+            AdGroupService = adGroupService;
         }
 
-        //public async Task<IActionResult> OnGetAsync(int id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var campaign = await CampaignService.GetCampaignByIdAsync(id);
-        //    if (campaign == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    else
-        //    {
-        //        Campaign = (IList<Campaign>) campaign;
-        //    }
-        //    return Page();
-        //}
         public async Task<IActionResult> OnGetAsync(int id)
         {
 
             Campaign = await CampaignService.GetCampaignByIdAsync(id);
-
+            AdGroups = (IList<AdGroup>) await AdGroupService.GetAllAdGroupsAsync();
             return Page();
         }
     }

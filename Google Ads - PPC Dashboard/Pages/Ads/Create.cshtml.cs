@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Google_Ads___PPC_Dashboard.Data;
 using Google_Ads___PPC_Dashboard.Models;
+using Microsoft.EntityFrameworkCore;
+using Google.Api;
 
 namespace Google_Ads___PPC_Dashboard.Pages.Ads
 {
@@ -19,14 +21,19 @@ namespace Google_Ads___PPC_Dashboard.Pages.Ads
             _context = context;
         }
 
-        public IActionResult OnGet()
-        {
-        ViewData["AdGroupId"] = new SelectList(_context.AdGroups, "Id", "Id");
-            return Page();
-        }
-
         [BindProperty]
         public Ad Ad { get; set; } = default!;
+
+        public IActionResult OnGet(int AdGroupId)
+        {
+            // Set the AdGroupId for the new Ad
+            Ad = new Ad
+            {
+                AdGroupId = AdGroupId
+            };
+
+            return Page();
+        }
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()

@@ -67,3 +67,28 @@ a:hover {
 .Pinfo p {
     display: inline-block;
 }
+                           /*  Adgroupbox ish*/
+.Adgroupbox {
+    display: inline-block;
+    border-radius: 5%;
+    border: 2px solid hsl(0, 0%, 65%);
+    margin: 2px;
+    width: 300px;
+}
+
+    .Adgroupbox:hover {
+        border: 2px solid hsl(0, 0%, 14%);
+    }
+
+    .Adgroupbox img {
+        border-radius: 5%;
+        width: 100%;
+        height: auto;
+    }
+
+    .Adgroupbox .Pinfo {
+        border-radius: 5%;
+        padding: 10px;
+        text-align: center;
+        background-color: white;
+    }

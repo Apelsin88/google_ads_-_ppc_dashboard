@@ -6,14 +6,39 @@
 }
 
 <h1>@Html.DisplayFor(model => model.Campaign.Name)</h1>
-<h4>Campaign</h4>
-<div class="container-fluid">
-    <div class="row">
-        <div class="p-3 bg-light">
-            <canvas id="myLineChart" width="400" height="200"></canvas>
+<h4>AdGroups</h4>
+@foreach (var adGroup in Model.Campaign.AdGroups)
+{
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 bg-info" style="height: 80vh; overflow-y: auto;">
+                <h4>@adGroup.Name</h4>
+                <p>
+                    <a asp-page="/Ads/Create" asp-route-AdGroupId="@adGroup.Id">Create New Ad</a>
+                </p>
+                @foreach (var ad in adGroup.Ads)
+                {
+                    <a asp-page="/Ads/Details" asp-route-id="@ad.Id" class="productbox-link">
+                        <div class="Productbox" onclick="">
+                            <div class="Pinfo">
+                                @Html.DisplayFor(modelItem => ad.HeadlinePart1)
+                                <br />
+                                @Html.DisplayFor(modelItem => ad.HeadlinePart2)
+                                <br />
+                                @Html.DisplayFor(modelItem => ad.Description1)
+                                <br />
+                                @Html.DisplayFor(modelItem => ad.FinalUrl)
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
         </div>
     </div>
-</div>
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script>
     var ctx = document.getElementById('myLineChart2').getContext('2d');
     var myLineChart2 = new Chart(ctx, {
@@ -51,6 +76,7 @@
         }
     });
 </script>
+
 <div>
     <hr />
     <dl class="row">
