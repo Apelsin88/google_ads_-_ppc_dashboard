@@ -24,12 +24,16 @@ namespace Google_Ads___PPC_Dashboard.Pages.Ads
         [BindProperty]
         public Ad Ad { get; set; } = default!;
 
-        public IActionResult OnGet(int AdGroupId)
+        public async Task<IActionResult> OnGetAsync(int? AdGroupId)
         {
+            var adgroup = await _context.AdGroups.FirstOrDefaultAsync(m => m.Id == AdGroupId);
+
             // Set the AdGroupId for the new Ad
             Ad = new Ad
             {
-                AdGroupId = AdGroupId
+                AdGroupId = AdGroupId.Value,
+
+                AdGroup = adgroup
             };
 
             return Page();
