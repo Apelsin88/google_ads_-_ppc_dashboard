@@ -19,18 +19,37 @@ namespace Google_Ads___PPC_Dashboard.Pages.AdGroups
             _context = context;
         }
 
-        public IActionResult OnGet()
-        {
-        ViewData["CampaignId"] = new SelectList(_context.Campaigns, "Id", "Id");
-            return Page();
-        }
-
         [BindProperty]
         public AdGroup AdGroup { get; set; } = default!;
 
-        // For more information, see https://aka.ms/RazorPagesCRUD.
+        public IActionResult OnGet(int CampaignId)
+        {
+            // Set the AdGroupId for the new Ad
+            AdGroup = new AdGroup
+            {
+                CampaignId = CampaignId
+            };
+
+
+            return Page();
+        }
+
         public async Task<IActionResult> OnPostAsync()
         {
+            // Hämta kampanjen baserat på CampaignId innan ModelState valideras
+            var campaign = await _context.Campaigns.FindAsync(AdGroup.CampaignId);
+            if (campaign == null)
+            {
+                // Lägg till ett felmeddelande om kampanjen inte hittas
+                return Page();
+            }
+            else
+            {
+                // Sätt navigationsobjektet Campaign om kampanjen hittas
+                AdGroup.Campaign = campaign;
+            }
+
+            // Kontrollera om ModelState är giltigt efter att vi har satt Campaign
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -40,6 +59,18 @@ namespace Google_Ads___PPC_Dashboard.Pages.AdGroups
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
+
+
+
+            //if (!ModelState.IsValid)
+            //{
+            //    return Page();
+            //}
+
+            //_context.AdGroups.Add(AdGroup);
+            //await _context.SaveChangesAsync();
+
+            //return RedirectToPage("./Index");
         }
     }
 }

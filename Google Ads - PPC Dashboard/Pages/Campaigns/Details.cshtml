@@ -7,6 +7,9 @@
 
 <h1>@Html.DisplayFor(model => model.Campaign.Name)</h1>
 <h4>AdGroups</h4>
+<p>
+    <a asp-page="/AdGroups/Create" asp-route-CampaignId="@Model.Campaign.Id">Create New AdGroup</a>
+</p>
 @foreach (var adGroup in Model.Campaign.AdGroups)
 {
     <div class="container-fluid">

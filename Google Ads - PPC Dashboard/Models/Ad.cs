@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Google_Ads___PPC_Dashboard.Models
@@ -11,6 +12,7 @@ namespace Google_Ads___PPC_Dashboard.Models
 
         public int AdGroupId { get; set; } // Foreign Key to AdGroup
 
+        [ValidateNever]
         public AdGroup AdGroup { get; set; } = null!; // Navigation Property
 
         public string AdType { get; set; } = null!; // E.g., Text, Display

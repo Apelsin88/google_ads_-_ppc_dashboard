@@ -21,27 +21,37 @@ namespace Google_Ads___PPC_Dashboard.Pages.Ads
             _context = context;
         }
 
+
         [BindProperty]
         public Ad Ad { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(int? AdGroupId)
+        public IActionResult OnGet(int AdGroupId)
         {
-            var adgroup = await _context.AdGroups.FirstOrDefaultAsync(m => m.Id == AdGroupId);
-
             // Set the AdGroupId for the new Ad
             Ad = new Ad
             {
-                AdGroupId = AdGroupId.Value,
-
-                AdGroup = adgroup
+                AdGroupId = AdGroupId
             };
 
             return Page();
         }
 
-        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            // Hämta kampanjen baserat på CampaignId innan ModelState valideras
+            var adGroup = await _context.AdGroups.FindAsync(Ad.AdGroupId);
+            if (adGroup == null)
+            {
+                // Lägg till ett felmeddelande om kampanjen inte hittas
+                return Page();
+            }
+            else
+            {
+                // Sätt navigationsobjektet Campaign om kampanjen hittas
+                Ad.AdGroup = adGroup;
+            }
+
+            // Kontrollera om ModelState är giltigt efter att vi har satt Campaign
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -52,5 +62,6 @@ namespace Google_Ads___PPC_Dashboard.Pages.Ads
 
             return RedirectToPage("./Index");
         }
+
     }
 }

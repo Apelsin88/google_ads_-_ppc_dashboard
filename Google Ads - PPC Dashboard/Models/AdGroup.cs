@@ -1,4 +1,5 @@
 ﻿using Google.Ads.GoogleAds.V16.Services;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,6 +12,7 @@ namespace Google_Ads___PPC_Dashboard.Models
         public string? GoogleAdGroup { get; set; }
         public int CampaignId { get; set; } // Foreign Key to Campaign
 
+        [ValidateNever]
         public Campaign Campaign { get; set; } = null!;
 
         public string? Name { get; set; }
