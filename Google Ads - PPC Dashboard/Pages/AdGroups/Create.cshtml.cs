@@ -58,19 +58,8 @@ namespace Google_Ads___PPC_Dashboard.Pages.AdGroups
             _context.AdGroups.Add(AdGroup);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Campaigns/Details", new { id = campaign.Id });
 
-
-
-            //if (!ModelState.IsValid)
-            //{
-            //    return Page();
-            //}
-
-            //_context.AdGroups.Add(AdGroup);
-            //await _context.SaveChangesAsync();
-
-            //return RedirectToPage("./Index");
         }
     }
 }

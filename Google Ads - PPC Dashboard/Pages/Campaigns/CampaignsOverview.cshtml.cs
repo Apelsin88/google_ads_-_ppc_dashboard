@@ -12,16 +12,20 @@ namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
 
         private readonly Google_Ads___PPC_Dashboard.Services.ICampaignService? CampaignService;
 
+        private readonly Google_Ads___PPC_Dashboard.Services.IAdService? AdService;
+
         public IList<Campaign> Campaigns { get; set; } = default!;
 
-        public CampaignsOverviewModel(ICampaignService campaginService)
+        public CampaignsOverviewModel(ICampaignService campaginService, IAdService adService)
         {
             CampaignService = campaginService;
+            AdService = adService;
         }
 
         public async Task OnGetAsync()
         {
             Campaigns = (IList<Campaign>)await CampaignService.GetAllCampaignsAsync();
+
         }
     }
 }

@@ -32,6 +32,7 @@
             <h4>Campaigns</h4>
             @foreach (var item in Model.Campaigns)
             {
+                var active = item.GetNumberOfAds();
                 <a asp-page="./Details" asp-route-id="@item.Id" class="productbox-link">
                     <div class="Productbox" onclick="">
                         <div class="Pinfo">
@@ -39,28 +40,17 @@
                             <br />
                             <label>Budget @Html.DisplayFor(modelItem => item.Budget) Kr</label>
                             <br />
-                            @{
-                                string numberOfAds = item.GetNumberOfAds(item.AdGroups).ToString();
-                            }
-                            <label>Ads @Html.DisplayFor(modelItem => numberOfAds) St</label>
+                            
+                            <label>Ads @Html.DisplayFor(modelItem => active) St</label>
                         </div>
                     </div>
                 </a>
-                
-                @* <div class="Productbox">
-            <div class="Pinfo">
-            <h5>@Html.DisplayFor(modelItem => item.Name)</h5>
-            <p>Budget: @Html.DisplayFor(modelItem => item.Budget) Kr</p>
-            <p>Ads: @Html.DisplayFor(modelItem => item.AdGroups.Count)</p>
-            <p>Created: @Html.DisplayFor(modelItem => item.CreatedAt)</p>
-            </div>
-            </div> *@
             }
         </div>
         <div class="col-6">
             <div class="d-grid gap-4" style="grid-template-rows: repeat(2, 1fr); grid-template-columns: 1fr 1fr; height: 80vh;">
-                <div class="p-3 bg-black bg-opacity-50">
-                    <table class="table table-striped">
+                <div class="p-3">
+                    <table class="table table-dark table-striped">
                         <thead>
                             <tr>
                                 <th>Metric</th>
@@ -176,78 +166,3 @@
         }
     });
 </script>
-
-
-@* <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Campaigns[0].GoogleCampaignId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campaigns[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campaigns[0].Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campaigns[0].Budget)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campaigns[0].BudgetType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campaigns[0].StartDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campaigns[0].EndDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campaigns[0].CreatedAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Campaigns[0].UpdatedAt)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Campaigns)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.GoogleCampaignId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Status)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Budget)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.BudgetType)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StartDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EndDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreatedAt)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UpdatedAt)
-                </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table> *@

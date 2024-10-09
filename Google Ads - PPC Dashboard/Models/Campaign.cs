@@ -46,5 +46,16 @@ namespace Google_Ads___PPC_Dashboard.Models
             }
             return numberOfAds;
         }
+
+        public int GetNumberOfAds()
+        {
+            int numberOfAds = 0;
+            foreach (AdGroup adGroup in AdGroups)
+            {
+                numberOfAds += adGroup.Ads.Count;
+
+            }
+            return numberOfAds;
+        }
     }
 }

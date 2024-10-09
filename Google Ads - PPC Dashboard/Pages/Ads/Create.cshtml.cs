@@ -60,7 +60,7 @@ namespace Google_Ads___PPC_Dashboard.Pages.Ads
             _context.Ads.Add(Ad);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Campaigns/Details", new { id = adGroup.CampaignId });
         }
 
     }
