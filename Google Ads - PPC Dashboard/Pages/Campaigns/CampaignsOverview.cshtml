@@ -32,7 +32,7 @@
             <h4>Campaigns</h4>
             @foreach (var item in Model.Campaigns)
             {
-                var active = item.GetNumberOfAds();
+                var totalAds = item.GetNumberOfAds();
                 <a asp-page="./Details" asp-route-id="@item.Id" class="productbox-link">
                     <div class="Productbox" onclick="">
                         <div class="Pinfo">
@@ -41,7 +41,7 @@
                             <label>Budget @Html.DisplayFor(modelItem => item.Budget) Kr</label>
                             <br />
                             
-                            <label>Ads @Html.DisplayFor(modelItem => active) St</label>
+                            <label>Ads @totalAds St</label>
                         </div>
                     </div>
                 </a>

@@ -19,6 +19,7 @@ namespace Google_Ads___PPC_Dashboard.Services
         {
             return await _dbContext.Campaigns
                 .Include(c => c.AdGroups)
+                .ThenInclude(ag => ag.Ads)
                 .Include(c => c.Performances)
                 .ToListAsync();
         }

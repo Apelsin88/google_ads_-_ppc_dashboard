@@ -1,10 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Google_Ads___PPC_Dashboard.Models
 {
     public class CampaignPerformance
     {
+        //[Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public int CampaignId { get; set; }
@@ -24,11 +27,15 @@ namespace Google_Ads___PPC_Dashboard.Models
 
         public decimal ConversionValue { get; set; }
 
-        public CampaignPerformance(int id, int campaignId,/* Campaign campaign,*/ DateTime date, int impressions, int clicks, decimal cost, int conversions, decimal conversionValue)
+        // Constructors
+        public CampaignPerformance()
+        {
+        }
+
+        public CampaignPerformance(int id, int campaignId, DateTime date, int impressions, int clicks, decimal cost, int conversions, decimal conversionValue)
         {
             Id = id;
             CampaignId = campaignId;
-            //Campaign = campaign;
             Date = date;
             Impressions = impressions;
             Clicks = clicks;

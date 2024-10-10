@@ -3,6 +3,7 @@ using System;
 using Google_Ads___PPC_Dashboard.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Google_Ads___PPC_Dashboard.Migrations
 {
     [DbContext(typeof(Google_Ads___PPC_DashboardContext))]
-    partial class Google_Ads___PPC_DashboardContextModelSnapshot : ModelSnapshot
+    [Migration("20241010144357_SeedCampaignPerformance9")]
+    partial class SeedCampaignPerformance9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
