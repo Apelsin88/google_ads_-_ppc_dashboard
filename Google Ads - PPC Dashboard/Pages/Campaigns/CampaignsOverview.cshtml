@@ -33,6 +33,8 @@
             @foreach (var item in Model.Campaigns)
             {
                 var totalAds = item.GetNumberOfAds();
+                var rOAS = item.GetROAS();
+
                 <a asp-page="./Details" asp-route-id="@item.Id" class="productbox-link">
                     <div class="Productbox" onclick="">
                         <div class="Pinfo">
@@ -40,42 +42,30 @@
                             <br />
                             <label>Budget @Html.DisplayFor(modelItem => item.Budget) Kr</label>
                             <br />
-                            
                             <label>Ads @totalAds St</label>
+                            <br />
+                            <label>ROAS - @rOAS</label>
                         </div>
                     </div>
                 </a>
             }
         </div>
         <div class="col-6">
-            <div class="d-grid gap-4" style="grid-template-rows: repeat(2, 1fr); grid-template-columns: 1fr 1fr; height: 80vh;">
-                <div class="p-3">
-                    <table class="table table-dark table-striped">
-                        <thead>
-                            <tr>
-                                <th>Metric</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Click Through Rate</td>
-                                <td>5%</td>
-                            </tr>
-                            <tr>
-                                <td>Conversion Rate</td>
-                                <td>3%</td>
-                            </tr>
-                            <tr>
-                                <td>Average CPC</td>
-                                <td>1.20 Kr</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="row">
+                <div class="col-6">
+                    <h1>Bra att veta</h1>
+                    <br />
+                    <h3>Conversions - @Model.AllConversions st</h3>
+                    <br />
+                    <h3>Avg ROAS - @Model.AvgROAS kr</h3>
                 </div>
-                <div class="p-3 bg-light">
-                    <canvas id="myPieChart" width="200" height="100"></canvas>
+                <div class="col-6">
+                    <div class="p-3 bg-light">
+                        <canvas id="myPieChart" width="200" height="100"></canvas>
+                    </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="p-3 bg-light col-span-2">
                     <canvas id="myLineChart" width="400" height="200"></canvas>
                 </div>
@@ -120,6 +110,9 @@
             }]
         },
         options: {
+
+
+
             scales: {
                 y: {
                     beginAtZero: true

@@ -16,6 +16,10 @@ namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
 
         public IList<Campaign> Campaigns { get; set; } = default!;
 
+        public decimal AllConversions { get; set; } = default!;
+
+        public decimal AvgROAS { get; set; } = default!;
+
         public CampaignsOverviewModel(ICampaignService campaginService, IAdService adService)
         {
             CampaignService = campaginService;
@@ -25,6 +29,14 @@ namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
         public async Task OnGetAsync()
         {
             Campaigns = (IList<Campaign>)await CampaignService.GetAllCampaignsAsync();
+
+            decimal roasSum = 0;
+            foreach (Campaign campaign in Campaigns)
+            {
+                AllConversions += campaign.GetConversions();
+                roasSum += campaign.GetROAS();
+            }
+            AvgROAS = roasSum / Campaigns.Count;
 
         }
     }

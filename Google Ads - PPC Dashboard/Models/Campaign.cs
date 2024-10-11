@@ -36,16 +36,6 @@ namespace Google_Ads___PPC_Dashboard.Models
         // One-to-Many with CampaignPerformance
         public ICollection<CampaignPerformance> Performances { get; set; } = new List<CampaignPerformance>();
 
-        public int GetNumberOfAds(ICollection<AdGroup> adGroups)
-        {
-            int numberOfAds = 0;
-            foreach (AdGroup adGroup in adGroups)
-            {
-                numberOfAds += adGroup.Ads.Count;
-
-            }
-            return numberOfAds;
-        }
 
         public int GetNumberOfAds()
         {
@@ -56,6 +46,32 @@ namespace Google_Ads___PPC_Dashboard.Models
 
             }
             return numberOfAds;
+        }
+
+        public decimal GetConversions()
+        {
+            decimal numberOfConversions = 0;
+            foreach (CampaignPerformance performance in Performances)
+            {
+                numberOfConversions += performance.Conversions;
+            }
+            return numberOfConversions;
+        }
+
+        public decimal GetROAS()
+        {
+
+            decimal conversionValue = 0;
+            decimal cost = 0;
+
+            foreach (CampaignPerformance performance in Performances)
+            {
+                conversionValue += performance.ConversionValue;
+                cost += performance.Cost;
+            }
+
+            decimal rOAS = conversionValue / cost;
+            return rOAS;
         }
     }
 }

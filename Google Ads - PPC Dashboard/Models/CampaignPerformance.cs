@@ -44,23 +44,35 @@ namespace Google_Ads___PPC_Dashboard.Models
             ConversionValue = conversionValue;
         }
 
+        //https://www.youtube.com/watch?v=qP7tddwUGU4
         public decimal GetClickThroughRate(int clicks, int impressions)
         {
             return clicks / impressions;
         }
 
-        // kanske?
+        //https://www.youtube.com/watch?v=qP7tddwUGU4
+        ///i hans video var det conversions delat pa interactions
+        public decimal GetConversionRate()
+        {
+            return Conversions / Impressions;
+        }
+
+        //https://www.youtube.com/watch?v=qP7tddwUGU4
+        // kanske? Finns redan men sa har kan man fa fram det oxa
         public decimal GetConversionValue(int conversions, int clicks)
         {
             return conversions / clicks;
         }
 
-        // Kanske?
-        public decimal GetConversionValuePerCost(decimal conversionValue, decimal cost)
+        //https://www.youtube.com/watch?v=qP7tddwUGU4
+        //https://dashthis.com/blog/most-important-google-ads-metrics/
+        // Kanske? Return on Ad Spend (ROAS)
+        public decimal GetConversionValuePerCost()
         {
-            return conversionValue / cost;
+            return ConversionValue / Cost;
         }
 
+        //https://www.youtube.com/watch?v=qP7tddwUGU4
         public decimal GetCostPerConversion(decimal cost, int conversions)
         {
             return cost / conversions;
