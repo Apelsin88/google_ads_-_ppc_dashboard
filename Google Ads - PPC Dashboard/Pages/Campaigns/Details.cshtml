@@ -10,36 +10,65 @@
 <p>
     <a asp-page="/AdGroups/Create" asp-route-CampaignId="@Model.Campaign.Id">Create New AdGroup</a>
 </p>
-@foreach (var adGroup in Model.Campaign.AdGroups)
-{
-    <div class="container-fluid rounded-1">
-        <div class="row">
-            <div class="col-6 bg-info" style="height: 80vh; overflow-y: auto;">
-                <h4>@adGroup.Name</h4>
-                <p>
-                    <a asp-page="/Ads/Create" asp-route-AdGroupId="@adGroup.Id">Create New Ad</a>
-                </p>
-                @foreach (var ad in adGroup.Ads)
-                {
-                    <a asp-page="/Ads/Details" asp-route-id="@ad.Id" class="productbox-link">
-                        <div class="Productbox" onclick="">
-                            <div class="Pinfo">
-                                @Html.DisplayFor(modelItem => ad.HeadlinePart1)
-                                <br />
-                                @Html.DisplayFor(modelItem => ad.HeadlinePart2)
-                                <br />
-                                @Html.DisplayFor(modelItem => ad.Description1)
-                                <br />
-                                @Html.DisplayFor(modelItem => ad.FinalUrl)
-                            </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 bg-info" style="height: 80vh; overflow-y: auto;">
+            @foreach (var adGroup in Model.Campaign.AdGroups)
+            {
+                <div class="container-fluid rounded-1">
+                    <div class="row">
+                        <div class="col-6 bg-info" style="height: 80vh; overflow-y: auto;">
+                            <h4>@adGroup.Name</h4>
+                            <p>
+                                <a asp-page="/Ads/Create" asp-route-AdGroupId="@adGroup.Id">Create New Ad</a>
+                            </p>
+                            @foreach (var ad in adGroup.Ads)
+                            {
+                                <a asp-page="/Ads/Details" asp-route-id="@ad.Id" class="productbox-link">
+                                    <div class="Productbox" onclick="">
+                                        <div class="Pinfo">
+                                            @Html.DisplayFor(modelItem => ad.HeadlinePart1)
+                                            <br />
+                                            @Html.DisplayFor(modelItem => ad.HeadlinePart2)
+                                            <br />
+                                            @Html.DisplayFor(modelItem => ad.Description1)
+                                            <br />
+                                            @Html.DisplayFor(modelItem => ad.FinalUrl)
+                                        </div>
+                                    </div>
+                                </a>
+                            }
                         </div>
-                    </a>
-                }
+                    </div>
+                </div>
+                <br />
+            }
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-6">
+                    <h1>Bra att veta</h1>
+                    <br />
+                    <h3>Impressions - @Model.Impressions st</h3>
+                    <br />
+                    <h3>ROAS - 8 kr</h3>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 bg-light">
+                        <canvas id="myPieChart2" width="200" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="p-3 bg-light col-span-2">
+                    <canvas id="myLineChart" width="400" height="200"></canvas>
+                </div>
             </div>
         </div>
     </div>
-    <br />
-}
+</div>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 

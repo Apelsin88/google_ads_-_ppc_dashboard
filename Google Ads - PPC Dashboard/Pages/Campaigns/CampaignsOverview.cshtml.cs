@@ -14,20 +14,32 @@ namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
 
         private readonly Google_Ads___PPC_Dashboard.Services.IAdService? AdService;
 
+        private readonly Google_Ads___PPC_Dashboard.Services.ICampaignPerformanceService? CampaignPerformanceService;
+
+
+
         public IList<Campaign> Campaigns { get; set; } = default!;
+
+        public IList<CampaignPerformance> campaignPerformances { get; set; } = default!;
+
 
         public decimal AllConversions { get; set; } = default!;
 
         public decimal AvgROAS { get; set; } = default!;
 
-        public CampaignsOverviewModel(ICampaignService campaginService, IAdService adService)
+
+
+        public CampaignsOverviewModel(ICampaignService campaginService, IAdService adService, ICampaignPerformanceService campaignPerformanceService)
         {
             CampaignService = campaginService;
             AdService = adService;
+            CampaignPerformanceService = campaignPerformanceService;
         }
 
         public async Task OnGetAsync()
         {
+            campaignPerformances = (IList<CampaignPerformance>)await CampaignPerformanceService.GetAllPerformancesAsync();
+
             Campaigns = (IList<Campaign>)await CampaignService.GetAllCampaignsAsync();
 
             decimal roasSum = 0;

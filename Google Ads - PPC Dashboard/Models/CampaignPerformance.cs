@@ -56,7 +56,13 @@ namespace Google_Ads___PPC_Dashboard.Models
         {
             return Conversions / Impressions;
         }
+                                                                                //Vaning18 vill ligga pa 2-3% i ConversionRate
+                                                                     //nar det galler ads/ sma saker som man vill salja oftare/storre mangeder.
+                                                                    // Men om det galler affarer med storre vinst per affar ar det ok med lagre.
 
+                                                                         //Verkar finnas flera definitioner for ConversionRate.
+                                                                         //         Alltid nagot av Conversions delat pa
+                                                                         //  Impressions, Clicks, Interactions, Visitors etc.
         //https://www.youtube.com/watch?v=qP7tddwUGU4
         // kanske? Finns redan men sa har kan man fa fram det oxa
         public decimal GetConversionValue(int conversions, int clicks)

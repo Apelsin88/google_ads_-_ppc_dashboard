@@ -18,8 +18,14 @@ namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
 
         //public IList<Campaign> Campaign { get; set; } = default!;
         public Campaign Campaign { get; set; } = default!;
+
         public IList<AdGroup> AdGroups { get; set; } = default!;
+
         public IList<Ad> Ads { get; set; } = default!;
+
+        public int Impressions { get; set; } = default!;
+
+        public int Clicks { get; set; } = default!;
 
         public DetailsModel(ICampaignService campaginService, IAdGroupService adGroupService)
         {
@@ -29,9 +35,17 @@ namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
 
         public async Task<IActionResult> OnGetAsync(int id)
         {
+            
+
 
             Campaign = await CampaignService.GetCampaignByIdAsync(id);
             AdGroups = (IList<AdGroup>) await AdGroupService.GetAllAdGroupsAsync();
+
+            foreach (CampaignPerformance performance in Campaign.Performances)
+            {
+                Impressions += performance.Impressions;
+                Clicks += performance.Clicks;
+            }
             return Page();
         }
     }
