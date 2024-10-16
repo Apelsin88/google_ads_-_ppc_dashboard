@@ -1,4 +1,5 @@
 ﻿@page
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
 @model Google_Ads___PPC_Dashboard.Pages.Campaigns.CampaignsOverviewModel
 
 @{
@@ -60,8 +61,27 @@
                     <h3>Avg ROAS - @Model.AvgROAS kr</h3>
                 </div>
                 <div class="col-6">
-                    <div class="p-3 bg-light">
-                        <canvas id="myPieChart" width="200" height="100"></canvas>
+                    <div class="row">
+                        <h1>Budget</h1>
+                    </div>
+                    <div class="row">
+                        <div class="p-3 bg-light">
+                            <canvas id="myPieChart" width="200" height="100"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <input type="radio" name="dataOption" id="clicks" value="Clicks" checked />
+                        <label for="clicks">Clicks</label>
+
+                        <input type="radio" name="dataOption" id="conversions" value="Conversions" />
+                        <label for="conversions">Conversions</label>
+
+                        <input type="radio" name="dataOption" id="impressions" value="Impressions" />
+                        <label for="impressions">Impressions</label>
                     </div>
                 </div>
             </div>
@@ -110,19 +130,21 @@
             }]
         },
         options: {
-
-
-
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: false
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
                 }
             }
         }
     });
 </script>
 
-@{
+@* @{
     // Prepare labels (shared across all campaigns)
     var labels2 = Model.campaignPerformances.Select(cp => cp.Date.ToString("MMM dd")).Distinct().ToArray();
 
@@ -148,11 +170,9 @@
 
         datasets.Add(dataset); // Add each dataset to the list
     }
-}
+} *@
 
-<script>
-    console.log("Labels:", @Html.Raw(Json.Serialize(labels2)));
-    console.log("Datasets:", @Html.Raw(Json.Serialize(datasets)));
+@* <script>
     var ctx2 = document.getElementById('myLineChart2').getContext('2d');
     var myLineChart2 = new Chart(ctx2, {
         type: 'line',
@@ -172,5 +192,94 @@
                 }
             }
         }
+    });
+</script> *@
+
+@{
+    // Prepare labels (shared across all campaigns)
+    var labels2 = Model.campaignPerformances.Select(cp => cp.Date.ToString("MMM dd")).Distinct().ToArray();
+
+    // Prepare datasets for Clicks, Conversions, and Impressions for each campaign
+    var datasetsClicks = Model.Campaigns.Select(campaign => new
+    {
+        label = campaign.Name,
+        data = Model.campaignPerformances.Where(cp => cp.CampaignId == campaign.Id)
+                                         .Select(cp => cp.Clicks)
+                                         .ToArray(),
+        borderColor = "#" + (campaign.Id * 123456).ToString("X6"),
+        fill = false
+    }).ToArray();
+
+    var datasetsConversions = Model.Campaigns.Select(campaign => new
+    {
+        label = campaign.Name,
+        data = Model.campaignPerformances.Where(cp => cp.CampaignId == campaign.Id)
+                                         .Select(cp => cp.Conversions)
+                                         .ToArray(),
+        borderColor = "#" + (campaign.Id * 123456).ToString("X6"),
+        fill = false
+    }).ToArray();
+
+    var datasetsImpressions = Model.Campaigns.Select(campaign => new
+    {
+        label = campaign.Name,
+        data = Model.campaignPerformances.Where(cp => cp.CampaignId == campaign.Id)
+                                         .Select(cp => cp.Impressions)
+                                         .ToArray(),
+        borderColor = "#" + (campaign.Id * 123456).ToString("X6"),
+        fill = false
+    }).ToArray();
+}
+
+<script>
+    var ctx2 = document.getElementById('myLineChart2').getContext('2d');
+
+    // Initial chart setup with Clicks data by default
+    var chartData = @Html.Raw(Json.Serialize(datasetsClicks)); // Default dataset is Clicks
+
+    var myLineChart2 = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: @Html.Raw(Json.Serialize(labels2)),  // Pass labels
+            datasets: chartData // Datasets based on default data (Clicks)
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+    // Function to get datasets based on the key
+    function getDataByKey(key) {
+        switch (key) {
+            case 'Clicks':
+                return @Html.Raw(Json.Serialize(datasetsClicks));
+            case 'Conversions':
+                return @Html.Raw(Json.Serialize(datasetsConversions));
+            case 'Impressions':
+                return @Html.Raw(Json.Serialize(datasetsImpressions));
+            default:
+                return @Html.Raw(Json.Serialize(datasetsClicks)); // Default to Clicks
+        }
+    }
+
+    // Listen for radio button changes
+    document.querySelectorAll('input[name="dataOption"]').forEach(function (radio) {
+        radio.addEventListener('change', function (event) {
+            var chartDataKey = event.target.value; // Get selected data type (Clicks, Conversions, Impressions)
+            var updatedData = getDataByKey(chartDataKey); // Fetch updated datasets
+
+            // Update the chart with new data
+            myLineChart2.data.datasets = updatedData;
+            myLineChart2.update();
+        });
     });
 </script>
