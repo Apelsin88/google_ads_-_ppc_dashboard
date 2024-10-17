@@ -10,18 +10,24 @@ namespace Google_Ads___PPC_Dashboard.Pages
     {
         private readonly IApplicationUserService UserService;
 
+        public LoginModel(IApplicationUserService userService)
+        {
+            UserService = userService;
+        }
+
         [BindProperty]
         public string Email { get; set; }
 
         [BindProperty]
         public string Password { get; set; }
 
-        public LoginModel(IApplicationUserService userService)
+        public string ErrorMessage { get; set; } = default!;
+
+        public void OnGet()
         {
-            UserService = userService;
         }
 
-        public IList<ApplicationUser> users { get; set; } = default!;
+        //public IList<ApplicationUser> users { get; set; } = default!;
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -30,22 +36,24 @@ namespace Google_Ads___PPC_Dashboard.Pages
                 return Page();
             }
 
-            // Check if the user exists
-            //var user = await UserService.GetUserByEmailAsync(Email);
+            var user = await UserService.AuthenticateUserAsync(Email, Password);
+            if (user == null)
+            {
+                ErrorMessage = "Invalid login attempt.";
+                return Page();
+            }
 
-            //if (user == null || !BCrypt.Net.BCrypt.Verify(Password, user.PasswordHash)) // Assuming passwords are hashed
-            //{
-            //    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-            //    return Page();
-            //}
+            // Create session after successful authentication
+            HttpContext.Session.SetString("UserId", user.Id.ToString());
+            HttpContext.Session.SetString("UserEmail", user.Email);
 
             // Handle the login success (you may set a session or generate a token here)
-            return RedirectToPage("/Dashboard");  // Assuming '/Dashboard' is your landing page after login
+            return RedirectToPage("/index");
         }
 
-        public async Task OnGetAsync()
-        {
-            users = (IList<ApplicationUser>)await UserService.GetAllApplicationUsersAsync();
-        }
+        //public async Task OnGetAsync()
+        //{
+        //    users = (IList<ApplicationUser>)await UserService.GetAllApplicationUsersAsync();
+        //}
     }
 }

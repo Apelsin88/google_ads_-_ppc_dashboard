@@ -9,6 +9,10 @@ namespace Google_Ads___PPC_Dashboard.Services
     {
         Task<IEnumerable<ApplicationUser>> GetAllApplicationUsersAsync();
         Task<ApplicationUser?> GetApplicationUserByIdAsync(string id);
+
+        Task<ApplicationUser> GetUserByEmailAsync(string email); //:P
+        Task<ApplicationUser?> AuthenticateUserAsync(string email, string password); //:D
+
         Task AddApplicationUserAsync(ApplicationUser user);
        //Task AddApplicationUserAsync(string id, string username, string email, string passwordHash, string firstName, string lastName, bool isActive, DateTime createdAt, DateTime updatedAt, DateTime lastLogin );
         Task UpdateApplicationUserAsync(ApplicationUser user);

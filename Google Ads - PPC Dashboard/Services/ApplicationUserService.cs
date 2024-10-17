@@ -38,6 +38,17 @@ namespace Google_Ads___PPC_Dashboard.Services
                 .FirstOrDefaultAsync(u => u.Id == id);
         }
 
+        public async Task<ApplicationUser> GetUserByEmailAsync(string email)
+        {
+            return await _dbContext.ApplicationUsers.FirstOrDefaultAsync(u => u.Email == email);                 //:P
+        }
+
+        public async Task<ApplicationUser?> AuthenticateUserAsync(string email, string password)
+        {
+            var user = await _dbContext.ApplicationUsers.FirstOrDefaultAsync(u => u.Email == email && u.PasswordHash == password);        //:D
+            return user;
+        }
+
         //////////////Alternativ 1 /////////////////////////
         public async Task AddApplicationUserAsync(ApplicationUser user)
         {

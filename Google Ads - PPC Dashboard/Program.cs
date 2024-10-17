@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity.Data;
 using Google.Ads.GoogleAds.Lib;
 using Google.Apis.Auth.OAuth2;
 using Google.Ads.GoogleAds.Config;
+using Google.Ads.GoogleAds;
 
 namespace Google_Ads___PPC_Dashboard
 {
@@ -30,26 +31,26 @@ namespace Google_Ads___PPC_Dashboard
 
             builder.Services.AddTransient<AuthService>();
 
-            builder.Services.AddAuthentication(x =>
-            {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(x =>
-            {
-                x.TokenValidationParameters = new TokenValidationParameters
-                {
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.PrivateKey)),
-                    ValidateIssuer = false,
-                    ValidateAudience = false
-                };
-            });
+            //builder.Services.AddAuthentication(x =>
+            //{
+            //    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //}).AddJwtBearer(x =>
+            //{
+            //    x.TokenValidationParameters = new TokenValidationParameters
+            //    {
+            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.PrivateKey)),
+            //        ValidateIssuer = false,
+            //        ValidateAudience = false
+            //    };
+            //});
 
-            builder.Services.AddAuthorization(options =>
-            {
-                options.AddPolicy("AdminPolicy", policy => policy.RequireRole("Admin"));
-                options.AddPolicy("PPCAnalystPolicy", policy => policy.RequireRole("PPC-Analyst"));
-                options.AddPolicy("CustomerPolicy", policy => policy.RequireRole("Customer"));
-            });
+            //builder.Services.AddAuthorization(options =>
+            //{
+            //    options.AddPolicy("AdminPolicy", policy => policy.RequireRole("Admin"));
+            //    options.AddPolicy("PPCAnalystPolicy", policy => policy.RequireRole("PPC-Analyst"));
+            //    options.AddPolicy("CustomerPolicy", policy => policy.RequireRole("Customer"));
+            //});
 
             // Konfigurera Entity Framework och databaskontexten
             builder.Services.AddDbContext<Google_Ads___PPC_DashboardContext>(options =>
@@ -58,6 +59,13 @@ namespace Google_Ads___PPC_Dashboard
             // Lägg till MVC-relaterade tjänster
             builder.Services.AddRazorPages();
             builder.Services.AddControllers();
+
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Set session timeout
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
 
 
 
@@ -89,10 +97,30 @@ namespace Google_Ads___PPC_Dashboard
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            //app.Use(async (context, next) =>
+            //{
+            //    if (!context.User.Identity.IsAuthenticated && !context.Request.Path.StartsWithSegments("/Login"))
+            //    {
+            //        context.Response.Redirect("/Login");
+            //        return;
+            //    }
+
+            //    await next();
+            //});
+
+            app.UseSession();  // Add session middleware
+
             app.UseRouting();
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapRazorPages();
+            });
+
+
 
             // alternativ 1
             //app.MapGet("/login", (AuthService service) =>
@@ -132,6 +160,9 @@ namespace Google_Ads___PPC_Dashboard
 
             // Mappa Razor Pages och Controllers
             app.MapRazorPages();
+
+            /*app.MapFallbackToPage("/login");*/  // This makes the login page the default
+
             app.MapControllers();
 
             // Kör appen
