@@ -36,18 +36,18 @@ namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
             CampaignPerformanceService = campaignPerformanceService;
         }
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
 
             // Check if the user is authenticated by checking the session
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
             {
                 // If no UserId is found in the session, redirect to the login page
-                RedirectToPage("/Login");
+                return RedirectToPage("/Login");
             }
 
             // If authenticated, proceed with the rest of the logic
-            
+
 
             campaignPerformances = (IList<CampaignPerformance>)await CampaignPerformanceService.GetAllPerformancesAsync();
 
@@ -61,6 +61,7 @@ namespace Google_Ads___PPC_Dashboard.Pages.Campaigns
             }
             AvgROAS = roasSum / Campaigns.Count;
 
+            return Page();
         }
 
     }

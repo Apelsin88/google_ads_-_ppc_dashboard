@@ -21,7 +21,16 @@ namespace Google_Ads___PPC_Dashboard.Pages.UserRoles
 
         public IActionResult OnGet()
         {
-        ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Id");
+            // Check if the user is authenticated by checking the session
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
+            {
+                // If no UserId is found in the session, redirect to the login page
+                return RedirectToPage("/Login");
+            }
+
+            // If authenticated, proceed with the rest of the logic
+
+            ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Id");
         ViewData["UserId"] = new SelectList(_context.ApplicationUsers, "Id", "Id");
             return Page();
         }

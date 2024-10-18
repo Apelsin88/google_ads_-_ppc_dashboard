@@ -21,7 +21,16 @@ namespace Google_Ads___PPC_Dashboard.Pages.Keywords
 
         public IActionResult OnGet()
         {
-        ViewData["AdGroupId"] = new SelectList(_context.AdGroups, "Id", "Id");
+            // Check if the user is authenticated by checking the session
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
+            {
+                // If no UserId is found in the session, redirect to the login page
+                return RedirectToPage("/Login");
+            }
+
+            // If authenticated, proceed with the rest of the logic
+
+            ViewData["AdGroupId"] = new SelectList(_context.AdGroups, "Id", "Id");
             return Page();
         }
 

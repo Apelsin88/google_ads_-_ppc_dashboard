@@ -21,10 +21,21 @@ namespace Google_Ads___PPC_Dashboard.Pages.UserDashboardSettings
 
         public IList<UserDashboardSetting> UserDashboardSetting { get;set; } = default!;
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
+            // Check if the user is authenticated by checking the session
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserId")))
+            {
+                // If no UserId is found in the session, redirect to the login page
+                return RedirectToPage("/Login");
+            }
+
+            // If authenticated, proceed with the rest of the logic
+
             UserDashboardSetting = await _context.UserDashboardSettings
                 .Include(u => u.User).ToListAsync();
+
+            return Page();
         }
     }
 }

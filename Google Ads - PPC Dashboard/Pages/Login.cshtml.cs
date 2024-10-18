@@ -25,6 +25,9 @@ namespace Google_Ads___PPC_Dashboard.Pages
 
         public void OnGet()
         {
+            // Clear session or authentication cookies
+            HttpContext.Session.Clear(); // Clear the session if using session-based authentication
+            //return RedirectToPage("/Login"); // Redirect to the login page
         }
 
         //public IList<ApplicationUser> users { get; set; } = default!;
@@ -46,14 +49,10 @@ namespace Google_Ads___PPC_Dashboard.Pages
             // Create session after successful authentication
             HttpContext.Session.SetString("UserId", user.Id.ToString());
             HttpContext.Session.SetString("UserEmail", user.Email);
+            HttpContext.Session.SetString("UserUsername", user.Username);
 
             // Handle the login success (you may set a session or generate a token here)
             return RedirectToPage("/index");
         }
-
-        //public async Task OnGetAsync()
-        //{
-        //    users = (IList<ApplicationUser>)await UserService.GetAllApplicationUsersAsync();
-        //}
     }
 }

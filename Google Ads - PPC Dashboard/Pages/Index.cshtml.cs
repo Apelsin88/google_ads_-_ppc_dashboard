@@ -27,13 +27,13 @@ namespace Google_Ads___PPC_Dashboard.Pages
             return Page();
         }
 
-        public IActionResult OnPostLogout()
-        {
-            // Clear the session to log the user out
-            HttpContext.Session.Clear();
+        //public IActionResult OnPostLogout()
+        //{
+        //    // Clear the session to log the user out
+        //    HttpContext.Session.Clear();
 
-            // Redirect to the login page after logout
-            return RedirectToPage("/Login");
-        }
+        //    // Redirect to the login page after logout
+        //    return RedirectToPage("/Login");
+        //}
     }
 }
